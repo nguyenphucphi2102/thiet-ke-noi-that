@@ -280,3 +280,22 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkScrollReveal);
   checkScrollReveal();
 });
+// Xử lý nút Back to Top
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+  // Nếu cuộn xuống quá 400px thì hiển thị nút, ngược lại thì ẩn đi
+  if (window.pageYOffset > 400) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+// Hiệu ứng cuộn mượt lên đầu trang khi bấm
+backToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Cuộn mượt mà thay vì giật thẳng lên luôn
+  });
+});
