@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="/css/iconfont.min.css">
     <link rel="stylesheet" href="/css/plugins.css">
     <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/brand-colors.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/modernizr-2.8.3.min.js"></script>
     <title>Trang chủ</title>
 </head>
+
 <body>
     <!--Header section start-->
     <div id="main-wrapper">
@@ -73,7 +75,7 @@
                                         <li><a href=".html">WC</a></li>
                                         <li><a href=".html">Ban công</a></li>
                                         <li><a href=".html">Thiết kế khác</a></li>
-                                        </ul>
+                                    </ul>
                                 </li>
                                 <li><a href="Library.html">Thư viện</a>
                                     <ul class="sub-menu">
@@ -112,21 +114,11 @@
                                 <i class="fa fa-heart-o"></i>
                             </a>
                             <div class="action-auth">
-                                <button class="auth-btn auth-signup">Đăng ký</button>
-                                <button class="auth-btn auth-login">Đăng nhập</button>
+                                <button class="auth-btn auth-signup" onclick="window.location.href='register.html'">Đăng ký</button>
+                                <button class="auth-btn auth-login" onclick="window.location.href='login.html'">Đăng nhập</button>
                             </div>
                         </div>
-
                         <!-- Mobile Menu Toggle -->
-                        <button class="mobile-menu-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
                         <button class="mobile-menu-toggle">
                             <span></span>
                             <span></span>
@@ -139,97 +131,84 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Hero Banner Section -->
-            <section class="hero-banner">
-                <!-- Animated Background Elements -->
-                <div class="hero-particles">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                </div>
-
-                <!-- Carousel Slides -->
-                <div class="hero-carousel">
-                    <div class="carousel-track">
-                        <!-- Slide 1 -->
-                        <div class="carousel-slide active">
-                            <div class="slide-overlay"></div>
-                            <div class="slide-content">
-                                <h2 class="slide-subtitle">Thiết Kế Nội Thất</h2>
-                                <h1 class="slide-title">Bạn Đang<br>Tìm Nhà Đẹp</h1>
-                                <p class="slide-desc">Không bị làm phiền với những giải pháp thiết kế chuyên nghiệp</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-slide">
-                            <div class="slide-overlay"></div>
-                            <div class="slide-content">
-                                <h2 class="slide-subtitle">Dự Án Thi Công</h2>
-                                <h1 class="slide-title">Chất Lượng<br>Vượt Trội</h1>
-                                <p class="slide-desc">Thi công trọn gói từ A đến Z với đội ngũ chuyên nghiệp</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="carousel-slide">
-                            <div class="slide-overlay"></div>
-                            <div class="slide-content">
-                                <h2 class="slide-subtitle">Dự Án Hoàn Thành</h2>
-                                <h1 class="slide-title">Từ Ý Tưởng<br>Đến Hiện Thực</h1>
-                                <p class="slide-desc">Hàng trăm dự án thành công với sự hài lòng của khách hàng</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Navigation Buttons -->
-                    <button class="carousel-nav carousel-prev">
-                        <i class="fa fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-nav carousel-next">
-                        <i class="fa fa-chevron-right"></i>
+            <!-- Banner Showcase Section -->
+            <section class="banner-showcase">
+                <div class="banner-showcase-track">
+                    <!-- Ảnh phụ bên trái (mờ) -->
+                    <button class="banner-side-slide banner-side-left" aria-label="Ảnh trước">
+                        <img src="/images/banner-side-1.avif" alt="Nội thất phòng khách">
                     </button>
 
-                    <!-- Carousel Dots -->
-                    <div class="carousel-dots">
-                        <button class="carousel-dot active" data-slide="0"></button>
-                        <button class="carousel-dot" data-slide="1"></button>
-                        <button class="carousel-dot" data-slide="2"></button>
-                    </div>
-                </div>
+                    <!-- Ảnh chính ở giữa -->
+                    <div class="banner-center-slide">
+                        <img src="/images/banner-main-1.avif" alt="Tủ áo cao cấp" class="banner-center-img">
 
-                <!-- Search Bar at Top -->
-                <div class="hero-search-bar">
-                    <form class="search-bar-form">
-                        <div class="search-input-group">
-                            <i class="fa fa-search"></i>
-                            <input type="text" placeholder="Thuê căn hộ Sơn Trà dưới 5 triệu" class="search-input">
-                        </div>
-                        <button type="submit" class="search-bar-btn">Tìm kiếm</button>
-                    </form>
-                </div>
-
-                <div class="hero-container">
-                    <!-- Left Side - Text Content -->
-                    <div class="hero-content">
-                        <div class="hero-text-wrapper">
-                            <p class="hero-label">Thiết Kế Nội Thất Chuyên Nghiệp</p>
-                            <p class="hero-description">Tìm kiếm và khám phá những bất động sản phù hợp với bạn</p>
-                        </div>
+                        <button class="banner-arrow banner-arrow-prev" aria-label="Ảnh trước">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="banner-arrow banner-arrow-next" aria-label="Ảnh sau">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
                     </div>
 
-                    <!-- Right Side - Benefits Box -->
-                    
+                    <!-- Ảnh phụ bên phải (mờ) -->
+                    <button class="banner-side-slide banner-side-right" aria-label="Ảnh sau">
+                        <img src="/images/banner-side-2.jpg" alt="Biệt thự sân vườn">
+                    </button>
+                </div>
+
+                <!-- Chấm điều hướng -->
+                <div class="banner-dots">
+                    <button class="banner-dot active" data-slide="0"></button>
+                    <button class="banner-dot" data-slide="1"></button>
+                    <button class="banner-dot" data-slide="2"></button>
                 </div>
             </section>
-            <sesion>
-                
-            </sesion>
+
+            <!-- Sidebar liên hệ nổi -->
+            <div class="floating-contact">
+                <a href="#" class="floating-item">
+                    <span class="floating-icon"><i class="fa fa-file-text-o"></i></span>
+                    <span class="floating-label">Báo giá</span>
+                </a>
+                <a href="#" class="floating-item">
+                    <span class="floating-icon"><i class="fa fa-comments"></i></span>
+                    <span class="floating-label">Chat<br>Zalo</span>
+                </a>
+                <a href="tel:0123456789" class="floating-item">
+                    <span class="floating-icon"><i class="fa fa-phone"></i></span>
+                    <span class="floating-label">Gọi điện</span>
+                </a>
+                <a href="#" class="floating-item">
+                    <span class="floating-icon"><i class="fa fa-facebook"></i></span>
+                    <span class="floating-label">Messenger</span>
+                </a>
+            </div>
+
+            <!-- Lĩnh vực kinh doanh -->
+            <section class="business-fields">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h2>Lĩnh Vực Kinh Doanh</h2>
+                        <span class="heading-underline"></span>
+                    </div>
+
+                    
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <img src="/images/banner-main-1.avif" alt="Nội thất căn hộ">
+                        </div>
+                        <div class="business-card">
+                            <img src="/images/banner-side-1.avif" alt="Thi công biệt thự">
+                        </div>
+                        <div class="business-card">
+                            <img src="/images/banner-side-2.jpg" alt="Nội thất cổ điển">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        
         <footer class="footer-section section bg-dark">
 
             <!--Footer Top start-->
@@ -324,125 +303,59 @@
         </footer>
     </div>
 
-</body>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/home.js"></script>
+    <script>
+    // Banner showcase: xoay vòng đúng 3 ảnh hiện có trong thư mục /images/
+    (function () {
+      var images = [
+        "/images/banner-side-1.avif",
+        "/images/banner-main-1.avif",
+        "/images/banner-side-2.jpg"
+      ];
+      var current = 1; // ảnh chính ban đầu
 
-<script src="/js/jquery-1.12.4.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/plugins.js"></script>
-<script src="/js/main.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const headerNav = document.querySelector('.header-nav');
-    const navItems = document.querySelectorAll('.nav-menu > li > a');
+      var leftBtn = document.querySelector(".banner-side-left img");
+      var mainImg = document.querySelector(".banner-center-img");
+      var rightBtn = document.querySelector(".banner-side-right img");
+      var dots = document.querySelectorAll(".banner-dot");
+      var prevArrow = document.querySelector(".banner-arrow-prev");
+      var nextArrow = document.querySelector(".banner-arrow-next");
 
-    if (menuToggle) {
-      menuToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        this.classList.toggle('active');
-        headerNav.classList.toggle('active');
-      });
-    }
-
-    // Handle submenu toggles on mobile
-    navItems.forEach(function(item) {
-      item.addEventListener('click', function(e) {
-        const subMenu = this.nextElementSibling;
-        if (subMenu && subMenu.classList.contains('sub-menu')) {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            subMenu.classList.toggle('active');
-          }
-        }
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.header-inner') && headerNav.classList.contains('active')) {
-        menuToggle.classList.remove('active');
-        headerNav.classList.remove('active');
+      function render() {
+        if (!mainImg) return;
+        var leftIndex = (current - 1 + images.length) % images.length;
+        var rightIndex = (current + 1) % images.length;
+        leftBtn.src = images[leftIndex];
+        mainImg.src = images[current];
+        rightBtn.src = images[rightIndex];
+        dots.forEach(function (d, i) {
+          d.classList.toggle("active", i === current);
+        });
       }
-    });
 
-    // ========== Hero Carousel ==========
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselSlides = document.querySelectorAll('.carousel-slide');
-    const carouselDots = document.querySelectorAll('.carousel-dot');
-    const carouselPrevBtn = document.querySelector('.carousel-prev');
-    const carouselNextBtn = document.querySelector('.carousel-next');
+      function goTo(index) {
+        current = (index + images.length) % images.length;
+        render();
+      }
 
-    let currentSlide = 0;
-    const totalSlides = carouselSlides.length;
-    let autoPlayInterval;
-
-    function updateCarousel() {
-      const offset = -currentSlide * 100;
-      carouselTrack.style.transform = `translateX(${offset}%)`;
-
-      // Update dots
-      carouselDots.forEach((dot, index) => {
-        if (index === currentSlide) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
+      if (prevArrow) prevArrow.addEventListener("click", function () { goTo(current - 1); });
+      if (nextArrow) nextArrow.addEventListener("click", function () { goTo(current + 1); });
+      var leftWrap = document.querySelector(".banner-side-left");
+      var rightWrap = document.querySelector(".banner-side-right");
+      if (leftWrap) leftWrap.addEventListener("click", function () { goTo(current - 1); });
+      if (rightWrap) rightWrap.addEventListener("click", function () { goTo(current + 1); });
+      dots.forEach(function (dot, i) {
+        dot.addEventListener("click", function () { goTo(i); });
       });
-    }
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
-
-    function goToSlide(index) {
-      currentSlide = index;
-      updateCarousel();
-      resetAutoPlay();
-    }
-
-    function startAutoPlay() {
-      autoPlayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    }
-
-    function resetAutoPlay() {
-      clearInterval(autoPlayInterval);
-      startAutoPlay();
-    }
-
-    // Event listeners for carousel
-    if (carouselPrevBtn) {
-      carouselPrevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoPlay();
-      });
-    }
-
-    if (carouselNextBtn) {
-      carouselNextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoPlay();
-      });
-    }
-
-    carouselDots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const index = parseInt(dot.getAttribute('data-slide'));
-        goToSlide(index);
-      });
-    });
-
-    // Start auto play on page load
-    startAutoPlay();
-  });
-</script>
+      render();
+    })();
+    </script>
 </body>
 
 </html>

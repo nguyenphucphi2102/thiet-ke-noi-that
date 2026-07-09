@@ -1,0 +1,236 @@
+:root {
+  --primary-bg: #4f633f; /* Xanh Rêu */
+  --secondary-bg: #145f66; /* Xanh Ngọc */
+  --gold-accent: #d5b579; /* Vàng Champagne */
+  --text-white: #ffffff;
+  --text-dark: #222222;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--text-white);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nền tối mờ bao quanh modal ( Overlay ) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Tối và mờ hơn */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container modal thu nhỏ */
+.interior-modal {
+  width: auto;
+  max-width: 1200px;
+  min-height: 550px;
+  background-color: var(--text-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Cột Trái: Brand Section */
+.brand-section {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-bg) 0%,
+    var(--primary-bg) 100%
+  );
+  color: var(--text-white);
+  padding: 2.5rem 3rem; /* Thu nhỏ padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.brand-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+}
+
+.main-title {
+  font-family: "Syncopate", sans-serif;
+  color: var(--gold-accent);
+  font-size: 1.8rem; /* Thu nhỏ tiêu đề */
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.sub-text {
+  font-size: 0.9rem; /* Thu nhỏ sub-text */
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag-item {
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-accent);
+  padding: 6px 15px; /* Thu nhỏ tag */
+  border-radius: 30px;
+  font-size: 0.8rem; /* Thu nhỏ font tag */
+  transition: all 0.3s ease;
+}
+.tag-item:hover {
+  background-color: var(--gold-accent);
+  color: var(--text-dark);
+}
+
+/* Cột Phải: Form Section */
+.form-section {
+  padding: 2rem; /* Thu nhỏ padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+} /* Thu nhỏ form max width */
+.form-title {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.form-control {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+} /* Thu nhỏ input và font */
+.form-control:focus {
+  border-color: var(--secondary-bg);
+  box-shadow: 0 0 0 0.2rem rgba(20, 95, 102, 0.15);
+}
+.input-group-text {
+  background-color: transparent;
+  border-right: none;
+  color: var(--secondary-bg);
+  font-size: 0.9rem;
+}
+.form-control.with-icon {
+  border-left: none;
+}
+
+.btn-primary-custom {
+  background-color: var(--secondary-bg);
+  color: var(--text-white);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.btn-primary-custom:hover {
+  background-color: var(--primary-bg);
+  color: var(--gold-accent);
+}
+
+/* Link Đăng nhập ngay - đổi sang vàng champagne theo ví dụ */
+.link-custom {
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.link-custom:hover {
+  color: var(--secondary-bg);
+}
+
+.text-muted-custom {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Nút Đóng 'X' (màu trắng trên nền xanh) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Đảm bảo form input vừa vặn */
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.2rem;
+}
+.close-btn {
+  color: #000;
+}
+/* Responsive cho điện thoại (modal xếp chồng, nhỏ hơn) */
+@media (max-width: 768px) {
+  .interior-modal {
+    width: 90%;
+    max-width: 450px;
+    flex-direction: column;
+  }
+  .brand-section,
+  .form-section {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    height: auto;
+    min-height: unset;
+  }
+  .main-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .category-tags {
+    justify-content: center;
+  }
+  .brand-section::after {
+    opacity: 0.1;
+  }
+  .close-btn {
+    color: var(--text-white);
+    top: 10px;
+    right: 10px;
+  }
+}

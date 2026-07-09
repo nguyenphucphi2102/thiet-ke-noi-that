@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Modal Thu Nhỏ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+   
+</head>
+<body>
+
+<div class="overlay">
+    
+    <div class="interior-modal d-flex flex-row">
+        
+        <button class="close-btn"><i class="bi bi-x"></i></button>
+
+        <div class="brand-section">
+            <div class="brand-content">
+                <h1 class="main-title">Hệ Thống<br>Quản Lý Không Gian<br>Nội Thất</h1>
+                <p class="sub-text">Cập nhật xu hướng, kiến tạo không gian hoàn mỹ cho mọi dự án.</p>
+                <div class="category-tags">
+                    <span class="tag-item">Phòng Khách</span>
+                    <span class="tag-item">Phòng Ngủ</span>
+                    <span class="tag-item">Nhà Bếp</span>
+                    <span class="tag-item">Văn Phòng</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-container">
+                <h2 class="form-title">Đăng Nhập</h2>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Số Điện Thoại</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                            <input type="tel" class="form-control with-icon" placeholder="Nhập số điện thoại" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Mật Khẩu</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input type="password" class="form-control with-icon" placeholder="****************" required>
+                            <span class="input-group-text border-left-0" style="cursor: pointer;"><i class="bi bi-eye"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check form-switch d-flex align-items-center gap-2">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label text-muted-custom mb-0" for="rememberMe" style="cursor: pointer;">
+                                Lưu đăng nhập
+                            </label>
+                        </div>
+                        <a href="#" class="link-custom">Quên mật khẩu</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-custom mb-3">Đăng Nhập</button>
+                    
+                    <div class="text-center mt-3">
+                        <span class="text-muted-custom">Bạn chưa có tài khoản? </span>
+                        <a href="register.html" class="link-highlight">Đăng ký ngay</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
