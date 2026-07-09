@@ -1,0 +1,202 @@
+/* ============================================
+   BRAND COLOR PALETTE
+   Design: DANH HIỆU THƯƠNG HIỆU
+   ============================================ */
+
+:root {
+  /* Primary Colors */
+  --color-primary-green: #4F633F;        /* Xanh rêu - Primary Main */
+  --color-primary-teal: #145F66;         /* Xanh ngọc - Secondary */
+  --color-accent-gold: #D5B579;          /* Vàng champagne - Accent */
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;                /* Trắng - Background & Text Light */
+  --color-black: #222222;                /* Đen - Dark Text */
+  --color-light-gray: #F5F5F5;           /* Light Background */
+  --color-dark-gray: #666666;            /* Gray Text */
+  
+  /* RGB Values for transparency */
+  --rgb-primary-green: 79, 99, 63;
+  --rgb-primary-teal: 20, 95, 102;
+  --rgb-accent-gold: 213, 181, 121;
+}
+
+/* ============================================
+   BACKGROUND COLORS
+   ============================================ */
+
+.bg-primary-green {
+  background-color: var(--color-primary-green);
+}
+
+.bg-primary-teal {
+  background-color: var(--color-primary-teal);
+}
+
+.bg-accent-gold {
+  background-color: var(--color-accent-gold);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+
+/* ============================================
+   TEXT COLORS
+   ============================================ */
+
+.text-primary-green {
+  color: var(--color-primary-green);
+}
+
+.text-primary-teal {
+  color: var(--color-primary-teal);
+}
+
+.text-accent-gold {
+  color: var(--color-accent-gold);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-dark-gray {
+  color: var(--color-dark-gray);
+}
+
+/* ============================================
+   BORDER COLORS
+   ============================================ */
+
+.border-primary-green {
+  border-color: var(--color-primary-green);
+}
+
+.border-primary-teal {
+  border-color: var(--color-primary-teal);
+}
+
+.border-accent-gold {
+  border-color: var(--color-accent-gold);
+}
+
+/* ============================================
+   BUTTONS - BRAND STYLED
+   ============================================ */
+
+.btn-primary-green {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover {
+  background-color: #3d4b2f;
+  color: var(--color-white);
+}
+
+.btn-primary-teal {
+  background-color: var(--color-primary-teal);
+  color: var(--color-white);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-teal:hover {
+  background-color: #0f4552;
+  color: var(--color-white);
+}
+
+.btn-accent-gold {
+  background-color: var(--color-accent-gold);
+  color: var(--color-black);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-accent-gold:hover {
+  background-color: #c9a866;
+  color: var(--color-black);
+}
+
+/* ============================================
+   LINK COLORS
+   ============================================ */
+
+a {
+  color: var(--color-primary-teal);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-green);
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+.hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 12px rgba(var(--rgb-primary-green), 0.2);
+}
+
+.hover-color-green {
+  transition: color 0.3s ease;
+}
+
+.hover-color-green:hover {
+  color: var(--color-primary-green);
+}
+
+.hover-color-teal {
+  transition: color 0.3s ease;
+}
+
+.hover-color-teal:hover {
+  color: var(--color-primary-teal);
+}
+
+/* ============================================
+   DIVIDER & ACCENT LINES
+   ============================================ */
+
+.divider-primary {
+  border-top: 2px solid var(--color-primary-green);
+}
+
+.divider-teal {
+  border-top: 2px solid var(--color-primary-teal);
+}
+
+.divider-gold {
+  border-top: 2px solid var(--color-accent-gold);
+}
+
+.accent-line-left {
+  border-left: 4px solid var(--color-accent-gold);
+  padding-left: 15px;
+}
+
+.accent-line-top {
+  border-top: 4px solid var(--color-accent-gold);
+  padding-top: 15px;
+}
