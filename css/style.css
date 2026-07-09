@@ -79,7 +79,7 @@ h5,
 h6 {
   font-family: "Open Sans", sans-serif;
   color: #333333;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 0;
   line-height: 1.2;
 }
@@ -12258,4 +12258,318 @@ header.header,
   .login-social {
     flex-direction: column;
   }
+}
+/* Lớp nền bổ trợ khi bắt đầu chuyển đổi ảnh */
+.banner-center-img {
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Khi JS thêm class này vào, ảnh sẽ tạm ẩn và thu nhỏ nhẹ */
+.banner-center-img.fade-effect {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.banner-showcase {
+  overflow: hidden;
+}
+
+.banner-center-slide,
+.banner-side-slide {
+  overflow: hidden;
+}
+
+.banner-center-slide img,
+.banner-side-slide img {
+  width: 100%;
+  display: block;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.7s ease,
+    filter 0.7s ease;
+}
+
+/* trạng thái đang chuyển */
+.banner-changing .banner-center-img {
+  transform: scale(0.92);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.banner-changing .banner-side-left img {
+  transform: translateX(-40px) scale(0.85);
+  opacity: 0.2;
+}
+
+.banner-changing .banner-side-right img {
+  transform: translateX(40px) scale(0.85);
+  opacity: 0.2;
+}
+
+/* sau khi đổi ảnh */
+.banner-center-img {
+  transform: scale(1);
+}
+
+.banner-side-left img,
+.banner-side-right img {
+  transform: scale(0.9);
+  opacity: 0.55;
+}
+
+.banner-side-slide:hover img {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+/* --- Cấu hình chung cho layout mới --- */
+.section-padding {
+  padding: 80px 0;
+}
+.bg-light-gray {
+  background-color: #f9f9f9;
+}
+.sub-title {
+  color: #cea679;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+/* 1. CSS Section Giới thiệu */
+.about-img-box {
+  position: relative;
+}
+.about-img-box img {
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.about-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #cea679;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.about-badge h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+.about-features {
+  margin: 25px 0;
+}
+.feature-item {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.feature-item i {
+  color: #cea679;
+  margin-right: 10px;
+}
+.theme-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.theme-btn:hover {
+  background: #cea679;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* 2. CSS Card Dịch vụ (Hiệu ứng Hover Phóng to, Đổi nền) */
+.service-box-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s ease;
+}
+.service-icon {
+  font-size: 40px;
+  color: #cea679;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+.service-box-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.service-box-card .read-more {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+/* Hover dịch vụ */
+.service-box-card:hover {
+  transform: translateY(-10px);
+  border-bottom-color: #cea679;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.service-box-card:hover .service-icon {
+  transform: scale(1.1);
+}
+.service-box-card:hover .read-more {
+  color: #cea679;
+}
+
+/* 3. CSS Dự án & Mẫu Thiết Kế (Hiệu ứng Tab & Lưới bọc Filter) */
+.project-tabs .tab-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 25px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.project-tabs .tab-btn.active,
+.project-tabs .tab-btn:hover {
+  background: #cea679;
+  color: white;
+  border-color: #cea679;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  transition: all 0.5s ease;
+}
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 280px;
+  transition: all 0.4s ease-in-out;
+}
+.project-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Hiệu ứng mờ đè Overlay khi trỏ chuột vào ảnh dự án */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 20px;
+  text-align: center;
+}
+.overlay-content span {
+  color: #cea679;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  transform: translateY(20px);
+  transition: all 0.4s;
+}
+.overlay-content h4 {
+  color: white;
+  font-size: 20px;
+  transform: translateY(20px);
+  transition: all 0.4s delay 0.1s;
+}
+.view-btn {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  background: #cea679;
+  color: white;
+  border-radius: 50%;
+  margin-top: 15px;
+  transform: translateY(20px);
+  transition: all 0.4s delay 0.2s;
+}
+
+.project-item:hover .project-img-wrapper img {
+  transform: scale(1.1);
+}
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+.project-item:hover .overlay-content span,
+.project-item:hover .overlay-content h4,
+.project-item:hover .view-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- HIỆU ỨNG ANIMATION KHI CUỘN TRANG (Scroll Reveal) --- */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal-active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Hiệu ứng biến mất ẩn của tab filter */
+.project-item.hide-item {
+  opacity: 0;
+  transform: scale(0.8);
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
 }
