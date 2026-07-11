@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thư viện - DanaHome</title>
+    <title>Video - DanaHome</title>
     <script src="https://kit.fontawesome.com/8c204d0fdf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/iconfont.min.css">
@@ -125,150 +125,151 @@
         </header>
 
         <main class="main-content">
-            <section
-                style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
-                <div
-                    style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;">
-                </div>
-                <div class="container" style="position: relative; z-index: 2;">
-                    <div class="page-banner text-center">
-                        <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">
-                            Thư Viện Video</h1>
-                        <ul class="page-breadcrumb"
-                            style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
-                            <li><a href="home.html" style="color: #cea679;">Video Công Trình</a></li>
-                            <li style="color: #ffffff;">/ Video 3D</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="library-page section-padding">
+            <section class="video-player-page section-padding">
                 <div class="container-fluid" style="padding-left: 30px; padding-right: 30px;">
-                    <div class="library-content">
-                        <div class="library-section-heading">
-                            <div>
-                                <span class="library-section-label">Video tuyển chọn</span>
-                                <h2>Chọn một video để xem chi tiết</h2>
+                    <div class="video-player-topbar">
+                        <a class="video-player-back" href="Library.html"><i class="fa fa-angle-left"></i> Quay lại thư
+                            viện</a>
+                        <a id="videoYoutubeLink" class="video-player-youtube" href="https://youtu.be/RRQveNvrIYY"
+                            target="_blank" rel="noopener"><i class="fa fa-youtube-play"></i> Mở trên YouTube</a>
+                    </div>
+
+                    <div class="video-player-intro">
+                        <span class="video-player-eyebrow">DanaHome Showcase</span>
+                        <h1 id="videoPlayerTitle">Vinhomes Ocean Park</h1>
+                        <p id="videoPlayerSubtitle">Căn hộ hiện đại, bảng màu trung tính và ánh sáng mở.</p>
+                    </div>
+
+                    <div class="video-player-layout">
+                        <div class="video-player-main">
+                            <div class="video-player-shell">
+                                <iframe id="videoPlayerFrame" class="video-player-frame" src="" title="DanaHome Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                            <div class="video-player-detail-card">
+                                <div class="video-player-detail-heading">
+                                    <div>
+                                        <span class="video-player-detail-label">Thông tin video</span>
+                                        <h2 id="videoDetailTitle">Giải pháp nội thất tối giản, sang và dễ ứng dụng</h2>
+                                    </div>
+                                    <div class="video-player-meta">
+                                        <span><i class="fa fa-video-camera"></i> Video thư viện</span>
+                                        <span><i class="fa fa-play-circle"></i> Xem trực tiếp</span>
+                                    </div>
+                                </div>
+                                <p id="videoPlayerDescription">Video ghi lại toàn bộ hành trình hoàn thiện căn hộ từ khu
+                                    vực khách bếp đến phòng ngủ master, tập trung vào giải pháp tối ưu công năng và tính
+                                    đồng bộ vật liệu.</p>
                             </div>
                         </div>
 
-                        <div class="library-video-grid" id="libraryVideoGrid">
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Vinhomes Ocean Park"
-                                data-subtitle="Căn hộ hiện đại, bảng màu trung tính và ánh sáng mở"
-                                data-desc="Video ghi lại toàn bộ hành trình hoàn thiện căn hộ từ khu vực khách bếp đến phòng ngủ master, tập trung vào giải pháp tối ưu công năng và tính đồng bộ vật liệu."
-                                data-thumb="../images/banner-main-1.avif">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-main-1.avif" alt="Căn hộ Vinhomes Ocean Park">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Căn hộ thực tế</span>
-                                            <h4>Vinhomes Ocean Park</h4>
-                                        </div>
-                                    </div>
+                        <aside class="video-player-sidebar">
+                            <div class="video-player-preview-card">
+                                <div class="video-player-preview-media">
+                                    <img id="videoPlayerThumb" src="../images/banner-main-1.avif" alt="Video DanaHome">
+                                </div>
+                                <div class="video-player-preview-content">
+                                    <span class="video-player-preview-label">Tổng quan dự án</span>
+                                    <ul class="video-player-feature-list">
+                                        <li><i class="fa fa-check-circle"></i><span>Thiết kế nội thất theo nhu cầu thực
+                                                tế từng gia đình.</span></li>
+                                        <li><i class="fa fa-check-circle"></i><span>Thi công đồng bộ từ xưởng, kiểm soát
+                                                tốt chất lượng hoàn thiện.</span></li>
+                                        <li><i class="fa fa-check-circle"></i><span>Ngôn ngữ tối giản, màu sắc ấm, nhấn
+                                                bằng vật liệu có chiều sâu.</span></li>
+                                    </ul>
+                                    <a class="theme-btn" href="Quotation&Contact.html">Đăng ký tư vấn ngay</a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="video-related-section">
+                        <div class="video-related-heading">
+                            <div>
+                                <span class="video-player-detail-label">Xem thêm</span>
+                                <h2>Video liên quan trong thư viện</h2>
+                            </div>
+                            <p>Chuyển nhanh sang các công trình và concept khác mà không cần quay lại danh sách thư
+                                viện.</p>
+                        </div>
+
+                        <div id="videoRelatedGrid" class="video-related-grid">
+                            <a class="video-related-card" data-title="Vinhomes Ocean Park"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=Vinhomes%20Ocean%20Park&subtitle=C%C4%83n%20h%E1%BB%99%20hi%E1%BB%87n%20%C4%91%E1%BA%A1i%2C%20b%E1%BA%A3ng%20m%C3%A0u%20trung%20t%C3%ADnh%20v%C3%A0%20%C3%A1nh%20s%C3%A1ng%20m%E1%BB%9F&desc=Video%20ghi%20l%E1%BA%A1i%20to%C3%A0n%20b%E1%BB%99%20h%C3%A0nh%20tr%C3%ACnh%20ho%C3%A0n%20thi%E1%BB%87n%20c%C4%83n%20h%E1%BB%99%20t%E1%BB%AB%20khu%20v%E1%BB%B1c%20kh%C3%A1ch%20b%E1%BA%BFp%20%C4%91%E1%BA%BFn%20ph%C3%B2ng%20ng%E1%BB%A7%20master%2C%20t%E1%BA%ADp%20trung%20v%C3%A0o%20gi%E1%BA%A3i%20ph%C3%A1p%20t%E1%BB%91i%20%C6%B0u%20c%C3%B4ng%20n%C4%83ng%20v%C3%A0%20t%C3%ADnh%20%C4%91%E1%BB%93ng%20b%E1%BB%99%20v%E1%BA%ADt%20li%E1%BB%87u.&thumb=..%2Fimages%2Fbanner-main-1.avif">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-main-1.avif" alt="Vinhomes Ocean Park">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Vinhomes Ocean Park</h3>
+                                    <p>Căn hộ hiện đại, bảng màu trung tính và ánh sáng mở</p>
                                 </div>
                             </a>
 
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Nhà phố Quảng Nam"
-                                data-subtitle="Không gian sinh hoạt liên thông với cảm giác ấm và thoáng"
-                                data-desc="Phương án nhà phố chú trọng độ thoáng, liên kết giữa bếp và phòng khách, kết hợp hệ gỗ sáng màu cùng điểm nhấn xanh rêu theo định hướng thương hiệu DanaHome."
-                                data-thumb="../images/banner-main-2.avif">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-main-2.avif" alt="Nhà phố Quảng Nam">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Nhà phố</span>
-                                            <h4>Nhà phố Quảng Nam</h4>
-                                        </div>
-                                    </div>
+                            <a class="video-related-card" data-title="Nhà phố Quảng Nam"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=Nh%C3%A0%20ph%E1%BB%91%20Qu%E1%BA%A3ng%20Nam&subtitle=Kh%C3%B4ng%20gian%20sinh%20ho%E1%BA%A1t%20li%C3%AAn%20th%C3%B4ng%20v%E1%BB%9Bi%20c%E1%BA%A3m%20gi%C3%A1c%20%E1%BA%A5m%20v%C3%A0%20tho%C3%A1ng&desc=Ph%C6%B0%C6%A1ng%20%C3%A1n%20nh%C3%A0%20ph%E1%BB%91%20ch%C3%BA%20tr%E1%BB%8Dng%20%C4%91%E1%BB%99%20tho%C3%A1ng%2C%20li%C3%AAn%20k%E1%BA%BFt%20gi%E1%BB%AFa%20b%E1%BA%BFp%20v%C3%A0%20ph%C3%B2ng%20kh%C3%A1ch%2C%20k%E1%BA%BFt%20h%E1%BB%A3p%20h%E1%BB%87%20g%E1%BB%97%20s%C3%A1ng%20m%C3%A0u%20c%C3%B9ng%20%C4%91i%E1%BB%83m%20nh%E1%BA%A5n%20xanh%20r%C3%AAu%20theo%20%C4%91%E1%BB%8Bnh%20h%C6%B0%E1%BB%9Bng%20th%C6%B0%C6%A1ng%20hi%E1%BB%87u%20DanaHome.&thumb=..%2Fimages%2Fbanner-main-2.avif">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-main-2.avif" alt="Nhà phố Quảng Nam">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Nhà phố Quảng Nam</h3>
+                                    <p>Không gian sinh hoạt liên thông với cảm giác ấm và thoáng</p>
                                 </div>
                             </a>
 
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Biệt thự Đà Nẵng"
-                                data-subtitle="Thiết kế nội thất cao cấp với lớp vật liệu sang trọng"
-                                data-desc="Video tổng hợp các góc nhìn nổi bật của biệt thự tại Đà Nẵng, thể hiện rõ các lớp hoàn thiện, tỷ lệ không gian và sự cân bằng giữa vẻ sang trọng và tính ở thực tế."
-                                data-thumb="../images/banner-main-3.avif">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-main-3.avif" alt="Biệt thự Đà Nẵng">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Biệt thự</span>
-                                            <h4>Biệt thự Đà Nẵng</h4>
-                                        </div>
-                                    </div>
+                            <a class="video-related-card" data-title="Biệt thự Đà Nẵng"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=Bi%E1%BB%87t%20th%E1%BB%B1%20%C4%90%C3%A0%20N%E1%BA%B5ng&subtitle=Thi%E1%BA%BFt%20k%E1%BA%BF%20n%E1%BB%99i%20th%E1%BA%A5t%20cao%20c%E1%BA%A5p%20v%E1%BB%9Bi%20l%E1%BB%9Bp%20v%E1%BA%ADt%20li%E1%BB%87u%20sang%20tr%E1%BB%8Dng&desc=Video%20t%E1%BB%95ng%20h%E1%BB%A3p%20c%C3%A1c%20g%C3%B3c%20nh%C3%ACn%20n%E1%BB%95i%20b%E1%BA%ADt%20c%E1%BB%A7a%20bi%E1%BB%87t%20th%E1%BB%B1%20t%E1%BA%A1i%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20th%E1%BB%83%20hi%E1%BB%87n%20r%C3%B5%20c%C3%A1c%20l%E1%BB%9Bp%20ho%C3%A0n%20thi%E1%BB%87n%2C%20t%E1%BB%B7%20l%E1%BB%87%20kh%C3%B4ng%20gian%20v%C3%A0%20s%E1%BB%B1%20c%C3%A2n%20b%E1%BA%B1ng%20gi%E1%BB%AFa%20v%E1%BA%BB%20sang%20tr%E1%BB%8Dng%20v%C3%A0%20t%C3%ADnh%20%E1%BB%9F%20th%E1%BB%B1c%20t%E1%BA%BF.&thumb=..%2Fimages%2Fbanner-main-3.avif">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-main-3.avif" alt="Biệt thự Đà Nẵng">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Biệt thự Đà Nẵng</h3>
+                                    <p>Thiết kế nội thất cao cấp với lớp vật liệu sang trọng</p>
                                 </div>
                             </a>
 
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Căn hộ Modern" data-subtitle="Concept 3D tối giản cho gia đình trẻ"
-                                data-desc="Bản dựng 3D giúp khách hàng hình dung rõ ngôn ngữ thiết kế tối giản, nhịp điệu ánh sáng và hệ tủ âm tường trong căn hộ diện tích vừa phải."
-                                data-thumb="../images/banner-main-4.avif">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-main-4.avif" alt="Walkthrough căn hộ Modern">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Concept 3D</span>
-                                            <h4>Căn hộ Modern</h4>
-                                        </div>
-                                    </div>
+                            <a class="video-related-card" data-title="Căn hộ Modern"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=C%C4%83n%20h%E1%BB%99%20Modern&subtitle=Concept%203D%20t%E1%BB%91i%20gi%E1%BA%A3n%20cho%20gia%20%C4%91%C3%ACnh%20tr%E1%BA%BB&desc=B%E1%BA%A3n%20d%E1%BB%B1ng%203D%20gi%C3%BAp%20kh%C3%A1ch%20h%C3%A0ng%20h%C3%ACnh%20dung%20r%C3%B5%20ng%C3%B4n%20ng%E1%BB%AF%20thi%E1%BA%BFt%20k%E1%BA%BF%20t%E1%BB%91i%20gi%E1%BA%A3n%2C%20nh%E1%BB%8Bp%20%C4%91i%E1%BB%87u%20%C3%A1nh%20s%C3%A1ng%20v%C3%A0%20h%E1%BB%87%20t%E1%BB%A7%20%C3%A2m%20t%C6%B0%E1%BB%9Dng%20trong%20c%C4%83n%20h%E1%BB%99%20di%E1%BB%87n%20t%C3%ADch%20v%E1%BB%ABa%20ph%E1%BA%A3i.&thumb=..%2Fimages%2Fbanner-main-4.avif">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-main-4.avif" alt="Căn hộ Modern">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Căn hộ Modern</h3>
+                                    <p>Concept 3D tối giản cho gia đình trẻ</p>
                                 </div>
                             </a>
 
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Biệt thự Luxury"
-                                data-subtitle="Video walkthrough nhấn mạnh trục nhìn và điểm nhấn trang trí"
-                                data-desc="Thiết kế sang trọng với đường nét rõ ràng, các bề mặt phản chiếu vừa đủ và bố cục không gian rộng mở, phù hợp nhóm khách hàng yêu thích cảm giác cao cấp nhưng vẫn tinh gọn."
-                                data-thumb="../images/banner-side-1.avif">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-side-1.avif" alt="Walkthrough biệt thự Luxury">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Walkthrough</span>
-                                            <h4>Biệt thự Luxury</h4>
-                                        </div>
-                                    </div>
+                            <a class="video-related-card" data-title="Biệt thự Luxury"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=Bi%E1%BB%87t%20th%E1%BB%B1%20Luxury&subtitle=Video%20walkthrough%20nh%E1%BA%A5n%20m%E1%BA%A1nh%20tr%E1%BB%A5c%20nh%C3%ACn%20v%C3%A0%20%C4%91i%E1%BB%83m%20nh%E1%BA%A5n%20trang%20tr%C3%AD&desc=Thi%E1%BA%BFt%20k%E1%BA%BF%20sang%20tr%E1%BB%8Dng%20v%E1%BB%9Bi%20%C4%91%C6%B0%E1%BB%9Dng%20n%C3%A9t%20r%C3%B5%20r%C3%A0ng%2C%20c%C3%A1c%20b%E1%BB%81%20m%E1%BA%B7t%20ph%E1%BA%A3n%20chi%E1%BA%BFu%20v%E1%BB%ABa%20%C4%91%E1%BB%A7%20v%C3%A0%20b%E1%BB%91%20c%E1%BB%A5c%20kh%C3%B4ng%20gian%20r%E1%BB%99ng%20m%E1%BB%9F%2C%20ph%C3%B9%20h%E1%BB%A3p%20nh%C3%B3m%20kh%C3%A1ch%20h%C3%A0ng%20y%C3%AAu%20th%C3%ADch%20c%E1%BA%A3m%20gi%C3%A1c%20cao%20c%E1%BA%A5p%20nh%C6%B0ng%20v%E1%BA%ABn%20tinh%20g%E1%BB%8Dn.&thumb=..%2Fimages%2Fbanner-side-1.avif">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-side-1.avif" alt="Biệt thự Luxury">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Biệt thự Luxury</h3>
+                                    <p>Video walkthrough nhấn mạnh trục nhìn và điểm nhấn trang trí</p>
                                 </div>
                             </a>
 
-                            <a class="library-video-link" href="VideoPlayer.html" data-video-id="RRQveNvrIYY"
-                                data-title="Nhà phố Classic"
-                                data-subtitle="Phối cảnh 3D với đường nét cân đối và chất liệu ấm"
-                                data-desc="Giải pháp thiết kế giữ tinh thần thanh lịch, chú trọng tỷ lệ mảng tường, hệ tủ trưng bày và sự liên kết giữa các không gian sinh hoạt chính trong nhà phố."
-                                data-thumb="../images/banner-side-2.jpg">
-                                <div class="library-video-card">
-                                    <div class="video-thumbnail">
-                                        <img src="../images/banner-side-2.jpg" alt="Walkthrough nhà phố Classic">
-                                        <div class="play-overlay">
-                                            <i class="fa fa-play"></i>
-                                        </div>
-                                        <div class="video-caption">
-                                            <span>Nhà phố 3D</span>
-                                            <h4>Nhà phố Classic</h4>
-                                        </div>
-                                    </div>
+                            <a class="video-related-card" data-title="Nhà phố Classic"
+                                href="VideoPlayer.html?v=RRQveNvrIYY&title=Nh%C3%A0%20ph%E1%BB%91%20Classic&subtitle=Ph%E1%BB%91i%20c%E1%BA%A3nh%203D%20v%E1%BB%9Bi%20%C4%91%C6%B0%E1%BB%9Dng%20n%C3%A9t%20c%C3%A2n%20%C4%91%E1%BB%91i%20v%C3%A0%20ch%E1%BA%A5t%20li%E1%BB%87u%20%E1%BA%A5m&desc=Gi%E1%BA%A3i%20ph%C3%A1p%20thi%E1%BA%BFt%20k%E1%BA%BF%20gi%E1%BB%AF%20tinh%20th%E1%BA%A7n%20thanh%20l%E1%BB%8Bch%2C%20ch%C3%BA%20tr%E1%BB%8Dng%20t%E1%BB%B7%20l%E1%BB%87%20m%E1%BA%A3ng%20t%C6%B0%E1%BB%9Dng%2C%20h%E1%BB%87%20t%E1%BB%A7%20tr%C6%B0ng%20b%C3%A0y%20v%C3%A0%20s%E1%BB%B1%20li%C3%AAn%20k%E1%BA%BFt%20gi%E1%BB%AFa%20c%C3%A1c%20kh%C3%B4ng%20gian%20sinh%20ho%E1%BA%A1t%20ch%C3%ADnh%20trong%20nh%C3%A0%20ph%E1%BB%91.&thumb=..%2Fimages%2Fbanner-side-2.jpg">
+                                <div class="video-related-media">
+                                    <img src="../images/banner-side-2.jpg" alt="Nhà phố Classic">
+                                    <span class="video-related-play"><i class="fa fa-play"></i></span>
+                                </div>
+                                <div class="video-related-content">
+                                    <h3>Nhà phố Classic</h3>
+                                    <p>Phối cảnh 3D với đường nét cân đối và chất liệu ấm</p>
                                 </div>
                             </a>
                         </div>
                     </div>
-
                 </div>
             </section>
         </main>
@@ -290,15 +291,6 @@
                                 <a href="#" class="zalo-icon" title="Zalo Official"><i class="fa fa-comments"></i></a>
                             </div>
                         </div>
-                        <nav class="design-pagination-wrap mt-40" aria-label="Phân trang mẫu thiết kế">
-                            <ul class="page-pagination">
-                                <li class="active"><a href="#" aria-current="page">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#" aria-label="Trang kế tiếp"><i class="fa fa-angle-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
 
                     <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
@@ -320,7 +312,7 @@
                             <h4 class="footer-title">Hỗ trợ</h4>
                             <span class="footer-title-line"></span>
                             <ul class="footer-menu-links mt-20">
-                                <li><a href="Library.html"><i class="fa fa-angle-right"></i> Thư viện ảnh 3D</a></li>
+                                <li><a href="Library.html"><i class="fa fa-angle-right"></i> Thư viện video</a></li>
                                 <li><a href="Blog.html"><i class="fa fa-angle-right"></i> Tin tức kiến thức</a></li>
                                 <li><a href="Quotation&Contact.html"><i class="fa fa-angle-right"></i> Quy trình báo
                                         giá</a></li>
@@ -386,24 +378,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/DesignGallery.js"></script>
-    <script>
-        (function () {
-            function buildPlayerHref(link) {
-                var params = new URLSearchParams();
-                params.set('v', link.getAttribute('data-video-id') || 'RRQveNvrIYY');
-                params.set('title', link.getAttribute('data-title') || 'DanaHome Video');
-                params.set('subtitle', link.getAttribute('data-subtitle') || '');
-                params.set('desc', link.getAttribute('data-desc') || '');
-                params.set('thumb', link.getAttribute('data-thumb') || '');
-                return 'VideoPlayer.html?' + params.toString();
-            }
-
-            var videoLinks = document.querySelectorAll('.library-video-link[data-video-id]');
-            Array.prototype.forEach.call(videoLinks, function (link) {
-                link.setAttribute('href', buildPlayerHref(link));
-            });
-        })();
-    </script>
+    <script src="/js/VideoPlayer.js"></script>
 </body>
 
 </html>
