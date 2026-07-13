@@ -75,5 +75,21 @@
     document.addEventListener("DOMContentLoaded", function () {
         var currentTitle = fillVideoDetail();
         toggleRelatedVideos(currentTitle);
+
+        // Nút Video 3D - hoạt động giống như click vào card bên dưới
+        var btn3D = document.getElementById("video3DBtn");
+        if (btn3D) {
+            btn3D.addEventListener("click", function (e) {
+                e.preventDefault();
+                var params = new URLSearchParams({
+                    v: "RRQveNvrIYY",
+                    title: "Video 3D Walkthrough - DanaHome",
+                    subtitle: "Trải nghiệm không gian nội thất qua phối cảnh 3D chân thực",
+                    desc: "Bản dựng 3D walkthrough giúp khách hàng hình dung rõ ngôn ngữ thiết kế, nhịp điệu ánh sáng và hệ tủ âm tường trong không gian thực tế trước khi thi công.",
+                    thumb: "../images/banner-main-1.avif"
+                });
+                window.location.href = "VideoPlayer.html?" + params.toString();
+            });
+        }
     });
 })();

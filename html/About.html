@@ -303,5 +303,27 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
+
+    <!-- Script nút cuộn lên đầu trang - chạy độc lập -->
+    <script>
+        (function () {
+            var btn = document.getElementById('backToTop');
+            if (!btn) return;
+
+            // Hiện/ẩn nút theo vị trí cuộn
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+
+            // Click để cuộn lên đầu trang
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>

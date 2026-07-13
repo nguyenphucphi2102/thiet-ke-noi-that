@@ -109,7 +109,7 @@
 
                         <!-- Header Actions -->
                         <div class="header-actions-group">
-                            <a href="#" class="action-icon action-search" title="Tìm kiếm">
+                            <a href="#" class="action-icon action-search" id="searchToggleBtn" title="Tìm kiếm">
                                 <i class="fa fa-search"></i>
                             </a>
                             <div class="action-auth">
@@ -129,6 +129,18 @@
                 </div>
             </div>
         </header>
+
+        <!-- Search Overlay - Đặt ngoài header để position:fixed hoạt động đúng -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-overlay-inner">
+                <form class="search-overlay-form" id="searchForm" action="#" method="get">
+                    <input type="text" id="searchInput" name="q" placeholder="Tìm kiếm nội thất, dự án, bài viết..." autocomplete="off">
+                    <button type="submit" class="search-submit-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -545,6 +557,65 @@
     <script src="/js/main.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/DesignGallery.js"></script>
+
+    <!-- Script tìm kiếm - chạy độc lập, không phụ thuộc vào main.js -->
+    <script>
+        (function () {
+            var searchToggleBtn = document.getElementById('searchToggleBtn');
+            var searchOverlay   = document.getElementById('searchOverlay');
+            var searchCloseBtn  = document.getElementById('searchCloseBtn');
+            var searchInput     = document.getElementById('searchInput');
+            var searchForm      = document.getElementById('searchForm');
+
+            if (!searchToggleBtn || !searchOverlay) return;
+
+            // Mở overlay khi bấm kính lú p
+            searchToggleBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                searchOverlay.classList.add('active');
+                document.body.classList.add('search-overlay-open');
+                setTimeout(function () { if (searchInput) searchInput.focus(); }, 300);
+            });
+
+            // Đóng khi bấm nút X
+            if (searchCloseBtn) {
+                searchCloseBtn.addEventListener('click', function () {
+                    searchOverlay.classList.remove('active');
+                    document.body.classList.remove('search-overlay-open');
+                    if (searchInput) searchInput.value = '';
+                });
+            }
+
+            // Đóng khi bấm phím ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                    searchOverlay.classList.remove('active');
+                    document.body.classList.remove('search-overlay-open');
+                    if (searchInput) searchInput.value = '';
+                }
+            });
+
+            // Đóng khi bấm vùng nền tối bên ngoài
+            searchOverlay.addEventListener('click', function (e) {
+                if (e.target === searchOverlay) {
+                    searchOverlay.classList.remove('active');
+                    document.body.classList.remove('search-overlay-open');
+                    if (searchInput) searchInput.value = '';
+                }
+            });
+
+            // Xử lý submit
+            if (searchForm) {
+                searchForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var keyword = searchInput ? searchInput.value.trim() : '';
+                    if (keyword) {
+                        window.location.href = 'search.html?q=' + encodeURIComponent(keyword);
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 
 </html>
