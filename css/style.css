@@ -10230,6 +10230,8 @@ h2.entry-title:before {
 }
 
 .relatedthumb .image a img {
+  height: 300px;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -12276,9 +12278,8 @@ h2.entry-title:before {
 /*-- Định vị cố định cho cả 2 loại Header khi cuộn trang --*/
 header.header,
 .header-clean {
-  position: -webkit-sticky;
-  /* Hỗ trợ trình duyệt Safari */
-  position: sticky;
+  position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
