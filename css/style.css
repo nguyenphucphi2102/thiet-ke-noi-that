@@ -11328,6 +11328,7 @@ h2.entry-title:before {
   color: #333333;
   border-radius: 5px;
   height: 45px;
+  margin-bottom: 10px;
 }
 
 .contact-form-wrap input:focus {
