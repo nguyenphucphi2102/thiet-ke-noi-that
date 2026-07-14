@@ -28,16 +28,24 @@
 */
 
 :root {
-  --color-olive: #4f633f; /* Xanh rêu - nền chính */
-  --color-teal: #145f66; /* Xanh ngọc - nền phụ */
-  --color-champagne: #d5b579; /* Vàng champagne - text, icon */
-  --color-white: #ffffff; /* Trắng - nền văn bản, text */
-  --color-black: #222222; /* Đen - nền phụ */
+  --color-olive: #4f633f;
+  /* Xanh rêu - nền chính */
+  --color-teal: #145f66;
+  /* Xanh ngọc - nền phụ */
+  --color-champagne: #d5b579;
+  /* Vàng champagne - text, icon */
+  --color-white: #ffffff;
+  /* Trắng - nền văn bản, text */
+  --color-black: #222222;
+  /* Đen - nền phụ */
 
   --font-heading:
-    "Orbitron", "Ethnocentric", "Montserrat", sans-serif; /* Tiêu đề chính */
-  --font-subheading: "Montserrat", sans-serif; /* Tiêu đề phụ */
-  --font-body: "Montserrat", sans-serif; /* Text */
+    "Orbitron", "Ethnocentric", "Montserrat", sans-serif;
+  /* Tiêu đề chính */
+  --font-subheading: "Montserrat", sans-serif;
+  /* Tiêu đề phụ */
+  --font-body: "Montserrat", sans-serif;
+  /* Text */
 }
 
 /* ---------------------------------------------------------------
@@ -102,14 +110,14 @@ a:hover,
 .grid-filter button::before,
 .header-top-social a:hover,
 .header-top-social.color-white a:hover,
-.ht-us-menu > li > a:hover,
-.ht-cr-menu > li > a:hover,
+.ht-us-menu>li>a:hover,
+.ht-cr-menu>li>a:hover,
 .ht-dropdown li a:hover,
-.main-menu > ul > li.active > a,
-.main-menu > ul > li:hover > a,
-.main-menu.color-white > ul > li > a:hover,
-.sub-menu li.active > a,
-.sub-menu li:hover > a,
+.main-menu>ul>li.active>a,
+.main-menu>ul>li:hover>a,
+.main-menu.color-white>ul>li>a:hover,
+.sub-menu li.active>a,
+.sub-menu li:hover>a,
 .single-feature .icon,
 .single-product .product-content .ratting i,
 .single-product .product-content .price .new,
@@ -120,13 +128,13 @@ a:hover,
 .deal-product-content .price .new,
 .deal-product-title a:hover,
 .footer-social a:hover,
-.footer-widget > .ft-menu > li > a:hover,
+.footer-widget>.ft-menu>li>a:hover,
 .copyright p a:hover,
 .wishlist-compare-btn a:hover:before,
 .review-link:hover,
 .single-product-sharing ul li a:hover,
-.dec-and-review-menu > li > a.active,
-.dec-and-review-menu > li > a:hover,
+.dec-and-review-menu>li>a.active,
+.dec-and-review-menu>li>a:hover,
 .myaccount-tab-menu a:hover,
 .myaccount-tab-menu a.active,
 .sidebar-list li a:hover,
@@ -193,12 +201,12 @@ a:hover,
   color: var(--color-olive);
 }
 
-.nav-menu > li > a {
+.nav-menu>li>a {
   color: var(--color-black);
 }
 
-.nav-menu > li > a:hover,
-.nav-menu > li.active > a {
+.nav-menu>li>a:hover,
+.nav-menu>li.active>a {
   background-color: var(--color-champagne);
   color: var(--color-black) !important;
 }
@@ -223,11 +231,9 @@ a:hover,
    04. Hero banner
 --------------------------------------------------------------- */
 .carousel-slide {
-  background: linear-gradient(
-    135deg,
-    var(--color-olive) 0%,
-    var(--color-teal) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--color-olive) 0%,
+      var(--color-teal) 100%);
 }
 
 .carousel-slide:nth-child(2) {
@@ -239,11 +245,9 @@ a:hover,
 }
 
 .hero-banner {
-  background: linear-gradient(
-    135deg,
-    var(--color-olive) 0%,
-    var(--color-teal) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--color-olive) 0%,
+      var(--color-teal) 100%);
 }
 
 .slide-subtitle,
@@ -314,7 +318,7 @@ a:hover,
 
 .footer-widget p,
 .footer-widget ul.address li,
-.footer-widget > .ft-menu > li > a,
+.footer-widget>.ft-menu>li>a,
 .copyright p {
   color: #d8d8d8;
 }
@@ -356,8 +360,8 @@ a:hover,
 .login-input-group input:focus,
 .contact-form-wrap input:focus,
 .contact-form-wrap textarea:focus,
-.single-input > input:focus,
-.single-input > textarea:focus {
+.single-input>input:focus,
+.single-input>textarea:focus {
   border-color: var(--color-teal);
   box-shadow: 0 0 0 3px rgba(20, 95, 102, 0.12);
 }
@@ -370,14 +374,14 @@ a:hover,
   border-color: var(--color-champagne);
 }
 
-.checkout-form .check-box input[type="checkbox"]:checked + label::before,
-.single-method input[type="radio"]:checked + label::before,
-.single-method input[type="checkbox"]:checked + label::before {
+.checkout-form .check-box input[type="checkbox"]:checked+label::before,
+.single-method input[type="radio"]:checked+label::before,
+.single-method input[type="checkbox"]:checked+label::before {
   border-color: var(--color-champagne);
 }
 
-.single-method input[type="radio"]:checked + label::after,
-.single-method input[type="checkbox"]:checked + label::after {
+.single-method input[type="radio"]:checked+label::after,
+.single-method input[type="checkbox"]:checked+label::after {
   background-color: var(--color-champagne);
 }
 
@@ -441,6 +445,7 @@ a:hover,
   margin: 0 auto;
   padding: 0 20px;
 }
+
 @media only screen and (max-width: 2000px) {
   .banner-showcase-track {
     display: flex;
@@ -452,6 +457,7 @@ a:hover,
     padding: 0 20px;
   }
 }
+
 .banner-side-slide {
   flex: 0 0 auto;
   width: 19%;
@@ -524,6 +530,7 @@ a:hover,
 .banner-arrow-prev {
   left: 16px;
 }
+
 .banner-arrow-next {
   right: 16px;
 }
@@ -556,6 +563,7 @@ a:hover,
   .banner-side-slide {
     display: none;
   }
+
   .banner-center-slide {
     max-width: 100%;
     height: 340px;
@@ -566,6 +574,7 @@ a:hover,
   .banner-center-slide {
     height: 240px;
   }
+
   .banner-arrow {
     width: 36px;
     height: 36px;
@@ -576,11 +585,14 @@ a:hover,
 /* ---- Sidebar liên hệ nổi bên phải ---- */
 .floating-contact {
   position: fixed;
-  right: 0;
+  right: 12px;
   bottom: 90px;
   z-index: 998;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .floating-item {
@@ -619,9 +631,11 @@ a:hover,
     width: 54px;
     padding: 8px 2px;
   }
+
   .floating-icon {
     font-size: 16px;
   }
+
   .floating-label {
     font-size: 9px;
   }
@@ -685,6 +699,7 @@ a:hover,
   .business-grid {
     grid-template-columns: 1fr;
   }
+
   .business-card {
     height: 220px;
   }

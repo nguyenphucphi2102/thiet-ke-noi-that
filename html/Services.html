@@ -111,7 +111,7 @@
 
                         <!-- Header Actions -->
                         <div class="header-actions-group">
-                            <a href="#" class="action-icon action-search" title="Tìm kiếm">
+                            <a href="#" class="action-icon action-search" id="searchToggleBtn" title="Tìm kiếm">
                                 <i class="fa fa-search"></i>
                             </a>
                             <div class="action-auth">
@@ -132,13 +132,30 @@
             </div>
         </header>
 
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-overlay-inner">
+                <form class="search-overlay-form" id="searchForm" action="#" method="get">
+                    <input type="text" id="searchInput" name="q" placeholder="Tìm kiếm nội thất, dự án, bài viết..."
+                        autocomplete="off">
+                    <button type="submit" class="search-submit-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <!-- Page Banner -->
-        <div class="page-banner-section section" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;"></div>
+        <div class="page-banner-section section"
+            style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
+            <div
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;">
+            </div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="page-banner text-center">
-                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Dịch Vụ Của Chúng Tôi</h1>
-                    <ul class="page-breadcrumb" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Dịch
+                        Vụ Của Chúng Tôi</h1>
+                    <ul class="page-breadcrumb"
+                        style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
                         <li><a href="home.html" style="color: #cea679;">Trang chủ</a></li>
                         <li style="color: #ffffff;">/ Dịch vụ</li>
                     </ul>
@@ -155,7 +172,8 @@
                         <span class="sub-title">GIẢI PHÁP TOÀN DIỆN</span>
                         <h2>Từ Thiết Kế Đến Thi Công - Trọn Vẹn Một Hành Trình</h2>
                         <span class="heading-underline"></span>
-                        <p style="max-width: 700px; margin: 20px auto 0; color: #555; line-height: 1.8; text-align: center;">
+                        <p
+                            style="max-width: 700px; margin: 20px auto 0; color: #555; line-height: 1.8; text-align: center;">
                             DanaHome mang đến hệ sinh thái dịch vụ nội thất khép kín: từ tư vấn, thiết kế 3D, thi công
                             đến cải tạo không gian sống, giúp gia chủ tiết kiệm thời gian, chi phí và an tâm tuyệt đối
                             trong suốt quá trình hoàn thiện ngôi nhà.
@@ -175,7 +193,8 @@
                                 <h3>Thiết kế nội thất</h3>
                                 <p>Đội ngũ kiến trúc sư giàu kinh nghiệm chuyển hóa ý tưởng của bạn thành bản vẽ 3D
                                     chân thực, tối ưu công năng và thẩm mỹ cho từng loại hình không gian.</p>
-                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -185,7 +204,8 @@
                                 <h3>Thi công nội thất</h3>
                                 <p>Thi công trực tiếp từ xưởng sản xuất, đảm bảo độ chính xác cao so với bản vẽ, vật
                                     liệu chuẩn nguồn gốc và tiến độ bàn giao đúng cam kết.</p>
-                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -195,7 +215,8 @@
                                 <h3>Thiết kế & thi công trọn gói</h3>
                                 <p>Giải pháp "chìa khóa trao tay" từ khâu lên ý tưởng, xin phép, thi công đến bàn giao
                                     hoàn thiện - gia chủ chỉ việc nhận nhà và tận hưởng.</p>
-                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -205,7 +226,8 @@
                                 <h3>Thi công cải tạo</h3>
                                 <p>Cải tạo, nâng cấp không gian cũ thành mới mà vẫn tối ưu chi phí, hạn chế tối đa ảnh
                                     hưởng đến sinh hoạt hằng ngày của gia đình bạn.</p>
-                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="Quotation&Contact.html" class="read-more">Nhận báo giá <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -251,7 +273,8 @@
                             <div class="about-vision-card">
                                 <div class="card-icon"><i class="fa fa-check-circle"></i></div>
                                 <h3>04. Bàn giao</h3>
-                                <p>Nghiệm thu chi tiết cùng gia chủ, bảo hành dài hạn và hỗ trợ hậu mãi sau bàn giao.</p>
+                                <p>Nghiệm thu chi tiết cùng gia chủ, bảo hành dài hạn và hỗ trợ hậu mãi sau bàn giao.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -266,7 +289,8 @@
                         <p>Liên hệ ngay với DanaHome để được khảo sát và báo giá miễn phí trong 24 giờ.
                             <span>Đội ngũ tư vấn viên luôn sẵn sàng hỗ trợ bạn.</span>
                         </p>
-                        <a href="Quotation&Contact.html" class="theme-btn">Nhận báo giá ngay <i class="fa fa-arrow-right"></i></a>
+                        <a href="Quotation&Contact.html" class="theme-btn">Nhận báo giá ngay <i
+                                class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </section>
@@ -274,94 +298,116 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer-section bg-dark text-white pt-80 pb-40">
-            <div class="container">
-                <div class="row row-25">
+                <footer class="ftr">
+            <!-- Dải accent trên cùng -->
+            <div class="ftr__accent-bar"></div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget about-widget">
-                            <h4 class="footer-title">DanaHome</h4>
-                            <span class="footer-title-line"></span>
-                            <p class="mt-20">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói uy tín
-                                hàng đầu. Chúng tôi mang đến giải pháp tối ưu không gian sống, biến ngôi nhà mơ ước của
-                                bạn thành hiện thực với chi phí tối ưu nhất từ xưởng sản xuất trực tiếp.</p>
-                            <div class="footer-social-links mt-25">
-                                <a href="#" class="fb-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="yt-icon" title="Youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="ins-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                <a href="#" class="zalo-icon" title="Zalo Official"><i class="fa fa-comments"></i></a>
+            <div class="ftr__main">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Cột 1: Thương hiệu -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 ftr__col ftr__col--brand">
+                            <div class="ftr__brand-logo">
+                                <span class="ftr__brand-icon"><i class="fa fa-home"></i></span>
+                                <span class="ftr__brand-name">Dana<span>Home</span></span>
+                            </div>
+                            <p class="ftr__brand-desc">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói
+                                uy tín hàng đầu tại Đà Nẵng. Chúng tôi mang đến giải pháp tối ưu không gian sống từ
+                                xưởng sản xuất trực tiếp.</p>
+                            <div class="ftr__tagline">
+                                <span class="ftr__tagline-text">KIẾN TẠO — KHÔNG GIAN — SỐNG</span>
+                            </div>
+                            <div class="ftr__social">
+                                <a href="#" class="ftr__social-btn ftr__social-btn--fb" title="Facebook"
+                                    aria-label="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--yt" title="Youtube"
+                                    aria-label="Youtube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--ins" title="Instagram"
+                                    aria-label="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--zalo" title="Zalo"
+                                    aria-label="Zalo">
+                                    <i class="fa fa-comments"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Dịch Vụ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Services.html#thiet-ke-noi-that"><i class="fa fa-angle-right"></i> Thiết kế nội thất</a></li>
-                                <li><a href="Services.html#thi-cong-noi-that"><i class="fa fa-angle-right"></i> Thi công nội thất</a></li>
-                                <li><a href="Services.html#cai-tao"><i class="fa fa-angle-right"></i> Cải tạo nhà phố</a></li>
-                                <li><a href="Services.html#tron-goi"><i class="fa fa-angle-right"></i> Thiết kế trọn gói</a></li>
-                                <li><a href="Services.html"><i class="fa fa-angle-right"></i> Thiết kế chung cư</a></li>
+                        <!-- Cột 2: Dịch Vụ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Dịch Vụ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thi công nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Cải tạo nhà phố</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế biệt thự</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế chung cư</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Hỗ Trợ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Library.html"><i class="fa fa-angle-right"></i> Thư viện ảnh 3D</a></li>
-                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i> Tin tức kiến thức</a></li>
-                                <li><a href="Quotation&Contact.html"><i class="fa fa-angle-right"></i> Quy trình báo
+                        <!-- Cột 3: Hỗ Trợ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Hỗ Trợ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Library.html"><i class="fa fa-angle-right"></i>Thư viện ảnh 3D</a></li>
+                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i>Tin tức kiến thức</a></li>
+                                <li><a href="Quotation&Contact.html"><i class="fa fa-angle-right"></i>Quy trình báo
                                         giá</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Chính sách bảo hành</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Hồ sơ năng lực</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Chính sách bảo hành</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Hồ sơ năng lực</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget contact-widget">
-                            <h4 class="footer-title">Liên Hệ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-contact-info mt-20">
-                                <li>
-                                    <i class="fa fa-map-marker"></i>
-                                    <span>Văn phòng: 123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
+                        <!-- Cột 4: Liên Hệ -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Liên Hệ
+                            </h4>
+                            <ul class="ftr__contact">
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ftr__contact-text">123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-building"></i>
-                                    <span>Xưởng sản xuất: Lô 45 Khu Công Nghiệp Hòa Khánh, Đà Nẵng</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-industry"></i></span>
+                                    <span class="ftr__contact-text">Lô 45 KCN Hòa Khánh, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    <span>Hotline: <a href="tel:0123456789">0123 456 789</a> (Zalo)</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-phone"></i></span>
+                                    <span class="ftr__contact-text"><a href="tel:0123456789">0123 456 789</a>
+                                        <em>(Zalo)</em></span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span>Email: <a href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-envelope-o"></i></span>
+                                    <span class="ftr__contact-text"><a
+                                            href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
                                 </li>
                             </ul>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-bottom-bar mt-20 pt-30 border-top-dark">
+            <!-- Bottom bar -->
+            <div class="ftr__bottom">
+                <div class="ftr__bottom-divider"></div>
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 text-center text-md-left mb-15 mb-md-0">
-                            <p class="copyright-text mb-0">&copy; 2026 <span>DanaHome</span>. Thiết kế & Bản quyền thuộc
-                                về DanaHome.</p>
-                        </div>
-                        <div class="col-md-6 text-center text-md-right">
-                            <div class="footer-bottom-brand">
-                                <span class="brand-highlight">DANAHOME</span> - KIẾN TẠO KHÔNG GIAN SỐNG
-                            </div>
+                    <div class="ftr__bottom-inner">
+                        <p class="ftr__copyright">&copy; 2026 <strong>DanaHome</strong>. Bản quyền thuộc về DanaHome.
+                        </p>
+                        <div class="ftr__bottom-cert">
+                            <span class="ftr__cert-badge"><i class="fa fa-shield"></i> Uy tín &amp; Chất lượng</span>
+                            <span class="ftr__cert-badge"><i class="fa fa-star"></i> 5 năm kinh nghiệm</span>
                         </div>
                     </div>
                 </div>
@@ -379,5 +425,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/main1.js"></script>
 </body>
+
 </html>

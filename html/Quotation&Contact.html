@@ -88,8 +88,10 @@
                                     <ul class="sub-menu">
                                         <li><a href="Quotation&Contact.html#bao-gia-thiet-ke">Báo giá thiết kế</a></li>
                                         <li><a href="Quotation&Contact.html#bao-gia-thi-cong">Báo giá thi công</a></li>
-                                        <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia">Đăng ký nhận báo giá</a></li>
-                                        <li><a href="Quotation&Contact.html#thong-tin-lien-he">Thông tin liên hệ</a></li>
+                                        <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia">Đăng ký nhận báo
+                                                giá</a></li>
+                                        <li><a href="Quotation&Contact.html#thong-tin-lien-he">Thông tin liên hệ</a>
+                                        </li>
                                         <li><a href="Quotation&Contact.html#hotline-zalo">Hotline / Zalo</a></li>
                                         <li><a href="Quotation&Contact.html#email">Email</a></li>
                                         <li><a href="Quotation&Contact.html#ban-do">Bản đồ</a></li>
@@ -111,7 +113,7 @@
 
                         <!-- Header Actions -->
                         <div class="header-actions-group">
-                            <a href="#" class="action-icon action-search" title="Tìm kiếm">
+                            <a href="#" class="action-icon action-search" id="searchToggleBtn" title="Tìm kiếm">
                                 <i class="fa fa-search"></i>
                             </a>
                             <div class="action-auth">
@@ -132,13 +134,30 @@
             </div>
         </header>
 
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-overlay-inner">
+                <form class="search-overlay-form" id="searchForm" action="#" method="get">
+                    <input type="text" id="searchInput" name="q" placeholder="Tìm kiếm nội thất, dự án, bài viết..."
+                        autocomplete="off">
+                    <button type="submit" class="search-submit-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <!-- Page Banner -->
-        <div class="page-banner-section section" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;"></div>
+        <div class="page-banner-section section"
+            style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
+            <div
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;">
+            </div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="page-banner text-center">
-                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Báo Giá & Liên Hệ</h1>
-                    <ul class="page-breadcrumb" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Báo
+                        Giá & Liên Hệ</h1>
+                    <ul class="page-breadcrumb"
+                        style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
                         <li><a href="home.html" style="color: #cea679;">Trang chủ</a></li>
                         <li style="color: #ffffff;">/ Báo giá & Liên hệ</li>
                     </ul>
@@ -164,7 +183,8 @@
                                 <h3>Báo giá thiết kế</h3>
                                 <p>Nhận báo giá chi tiết cho dịch vụ thiết kế 3D nội thất theo diện tích và phong cách
                                     bạn mong muốn.</p>
-                                <a href="#dang-ky-nhan-bao-gia" class="read-more">Đăng ký ngay <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="#dang-ky-nhan-bao-gia" class="read-more">Đăng ký ngay <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-30" id="bao-gia-thi-cong">
@@ -173,7 +193,8 @@
                                 <h3>Báo giá thi công</h3>
                                 <p>Nhận báo giá thi công trọn gói hoặc thi công theo hạng mục, minh bạch chi phí ngay
                                     từ đầu.</p>
-                                <a href="#dang-ky-nhan-bao-gia" class="read-more">Đăng ký ngay <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="#dang-ky-nhan-bao-gia" class="read-more">Đăng ký ngay <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +208,8 @@
                         <span class="sub-title">ĐĂNG KÝ NHANH</span>
                         <h2>Đăng Ký Nhận Báo Giá Miễn Phí</h2>
                         <span class="heading-underline"></span>
-                        <p style="max-width: 650px; margin: 20px auto 0; color: #555; line-height: 1.8; text-align: center;">
+                        <p
+                            style="max-width: 650px; margin: 20px auto 0; color: #555; line-height: 1.8; text-align: center;">
                             Điền thông tin bên dưới, đội ngũ tư vấn viên DanaHome sẽ liên hệ lại trong vòng 24 giờ để
                             khảo sát và gửi báo giá chi tiết miễn phí.
                         </p>
@@ -195,19 +217,21 @@
 
                     <div class="row mt-40 justify-content-center">
                         <div class="col-lg-8 col-md-10 col-sm-12">
-                            <form class="contact-form-wrap" id="quoteForm" style="background:#ffffff; padding:40px; border-radius:8px; box-shadow: 0 6px 20px rgba(0,0,0,0.06);">
+                            <form class="contact-form-wrap" id="quoteForm"
+                                style="background:#ffffff; padding:40px; border-radius:8px; box-shadow: 0 6px 20px rgba(0,0,0,0.06);">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <input type="text" placeholder="Họ và tên *" required>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <input type="tel" placeholder="Số điện thoại *" required>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <input type="email" placeholder="Email">
                                     </div>
-                                    <div class="col-md-6">
-                                        <select class="nice-select wide" style="width:100%; height:45px; border:1px solid #dddddd; border-radius:5px; padding:0 15px; color:#333333;">
+                                    <div class="col-md-6 mb-3">
+                                        <select class="nice-select wide"
+                                            style="width:100%; height:45px; border:1px solid #dddddd; border-radius:5px; padding:0 15px; color:#333333;">
                                             <option value="">Nhu cầu báo giá</option>
                                             <option value="thiet-ke">Báo giá thiết kế</option>
                                             <option value="thi-cong">Báo giá thi công</option>
@@ -215,11 +239,12 @@
                                             <option value="cai-tao">Thi công cải tạo</option>
                                         </select>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12 mb-3">
                                         <input type="text" placeholder="Diện tích / Địa chỉ công trình">
                                     </div>
-                                    <div class="col-12">
-                                        <textarea placeholder="Yêu cầu chi tiết (phong cách, ngân sách dự kiến...)"></textarea>
+                                    <div class="col-12 mb-3">
+                                        <textarea
+                                            placeholder="Yêu cầu chi tiết (phong cách, ngân sách dự kiến...)"></textarea>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn mt-3">Gửi yêu cầu báo giá</button>
@@ -242,35 +267,40 @@
 
                                 <ul>
                                     <li>
-                                        <div class="icon"><i class="fa fa-map-marker" style="color: var(--color-champagne);"></i></div>
+                                        <div class="icon"><i class="fa fa-map-marker"
+                                                style="color: var(--color-champagne);"></i></div>
                                         <div class="text">
                                             <span><strong>Văn phòng:</strong></span>
                                             <span>123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="icon"><i class="fa fa-building" style="color: var(--color-champagne);"></i></div>
+                                        <div class="icon"><i class="fa fa-building"
+                                                style="color: var(--color-champagne);"></i></div>
                                         <div class="text">
                                             <span><strong>Xưởng sản xuất:</strong></span>
                                             <span>Lô 45 Khu Công Nghiệp Hòa Khánh, Đà Nẵng</span>
                                         </div>
                                     </li>
                                     <li id="hotline-zalo">
-                                        <div class="icon"><i class="fa fa-phone" style="color: var(--color-champagne);"></i></div>
+                                        <div class="icon"><i class="fa fa-phone"
+                                                style="color: var(--color-champagne);"></i></div>
                                         <div class="text">
                                             <span><strong>Hotline / Zalo:</strong></span>
                                             <a href="tel:0123456789">0123 456 789</a>
                                         </div>
                                     </li>
                                     <li id="email">
-                                        <div class="icon"><i class="fa fa-envelope-o" style="color: var(--color-champagne);"></i></div>
+                                        <div class="icon"><i class="fa fa-envelope-o"
+                                                style="color: var(--color-champagne);"></i></div>
                                         <div class="text">
                                             <span><strong>Email:</strong></span>
                                             <a href="mailto:contact@danahome.vn">contact@danahome.vn</a>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="icon"><i class="fa fa-clock-o" style="color: var(--color-champagne);"></i></div>
+                                        <div class="icon"><i class="fa fa-clock-o"
+                                                style="color: var(--color-champagne);"></i></div>
                                         <div class="text">
                                             <span><strong>Giờ làm việc:</strong></span>
                                             <span>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
@@ -282,7 +312,8 @@
                                     <a href="#" class="fb-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
                                     <a href="#" class="yt-icon" title="Youtube"><i class="fa fa-youtube-play"></i></a>
                                     <a href="#" class="ins-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" class="zalo-icon" title="Zalo Official"><i class="fa fa-comments"></i></a>
+                                    <a href="#" class="zalo-icon" title="Zalo Official"><i
+                                            class="fa fa-comments"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -293,16 +324,16 @@
                                 <h3>Gửi Câu Hỏi Cho Chúng Tôi</h3>
                                 <form id="contactForm">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 mb-3">
                                             <input type="text" placeholder="Họ và tên *" required>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 mb-3">
                                             <input type="email" placeholder="Email *" required>
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 mb-3">
                                             <input type="text" placeholder="Tiêu đề">
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 mb-3">
                                             <textarea placeholder="Nội dung liên hệ *" required></textarea>
                                         </div>
                                     </div>
@@ -324,7 +355,8 @@
                         <h2>Tìm Đường Đến DanaHome</h2>
                         <span class="heading-underline"></span>
                     </div>
-                    <div class="contact-map mt-40" style="border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08);">
+                    <div class="contact-map mt-40"
+                        style="border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08);">
                         <iframe
                             src="https://www.google.com/maps?q=Nguy%E1%BB%85n%20V%C4%83n%20Linh%2C%20H%E1%BA%A3i%20Ch%C3%A2u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng&output=embed"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -337,94 +369,116 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer-section bg-dark text-white pt-80 pb-40">
-            <div class="container">
-                <div class="row row-25">
+                <footer class="ftr">
+            <!-- Dải accent trên cùng -->
+            <div class="ftr__accent-bar"></div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget about-widget">
-                            <h4 class="footer-title">DanaHome</h4>
-                            <span class="footer-title-line"></span>
-                            <p class="mt-20">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói uy tín
-                                hàng đầu. Chúng tôi mang đến giải pháp tối ưu không gian sống, biến ngôi nhà mơ ước của
-                                bạn thành hiện thực với chi phí tối ưu nhất từ xưởng sản xuất trực tiếp.</p>
-                            <div class="footer-social-links mt-25">
-                                <a href="#" class="fb-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="yt-icon" title="Youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="ins-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                <a href="#" class="zalo-icon" title="Zalo Official"><i class="fa fa-comments"></i></a>
+            <div class="ftr__main">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Cột 1: Thương hiệu -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 ftr__col ftr__col--brand">
+                            <div class="ftr__brand-logo">
+                                <span class="ftr__brand-icon"><i class="fa fa-home"></i></span>
+                                <span class="ftr__brand-name">Dana<span>Home</span></span>
+                            </div>
+                            <p class="ftr__brand-desc">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói
+                                uy tín hàng đầu tại Đà Nẵng. Chúng tôi mang đến giải pháp tối ưu không gian sống từ
+                                xưởng sản xuất trực tiếp.</p>
+                            <div class="ftr__tagline">
+                                <span class="ftr__tagline-text">KIẾN TẠO — KHÔNG GIAN — SỐNG</span>
+                            </div>
+                            <div class="ftr__social">
+                                <a href="#" class="ftr__social-btn ftr__social-btn--fb" title="Facebook"
+                                    aria-label="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--yt" title="Youtube"
+                                    aria-label="Youtube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--ins" title="Instagram"
+                                    aria-label="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--zalo" title="Zalo"
+                                    aria-label="Zalo">
+                                    <i class="fa fa-comments"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Dịch Vụ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Services.html#thiet-ke-noi-that"><i class="fa fa-angle-right"></i> Thiết kế nội thất</a></li>
-                                <li><a href="Services.html#thi-cong-noi-that"><i class="fa fa-angle-right"></i> Thi công nội thất</a></li>
-                                <li><a href="Services.html#cai-tao"><i class="fa fa-angle-right"></i> Cải tạo nhà phố</a></li>
-                                <li><a href="Services.html#tron-goi"><i class="fa fa-angle-right"></i> Thiết kế trọn gói</a></li>
-                                <li><a href="Services.html"><i class="fa fa-angle-right"></i> Thiết kế chung cư</a></li>
+                        <!-- Cột 2: Dịch Vụ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Dịch Vụ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thi công nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Cải tạo nhà phố</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế biệt thự</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế chung cư</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Hỗ Trợ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Library.html"><i class="fa fa-angle-right"></i> Thư viện ảnh 3D</a></li>
-                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i> Tin tức kiến thức</a></li>
-                                <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia"><i class="fa fa-angle-right"></i> Quy trình báo
+                        <!-- Cột 3: Hỗ Trợ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Hỗ Trợ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Library.html"><i class="fa fa-angle-right"></i>Thư viện ảnh 3D</a></li>
+                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i>Tin tức kiến thức</a></li>
+                                <li><a href="Quotation&Contact.html"><i class="fa fa-angle-right"></i>Quy trình báo
                                         giá</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Chính sách bảo hành</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Hồ sơ năng lực</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Chính sách bảo hành</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Hồ sơ năng lực</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget contact-widget">
-                            <h4 class="footer-title">Liên Hệ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-contact-info mt-20">
-                                <li>
-                                    <i class="fa fa-map-marker"></i>
-                                    <span>Văn phòng: 123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
+                        <!-- Cột 4: Liên Hệ -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Liên Hệ
+                            </h4>
+                            <ul class="ftr__contact">
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ftr__contact-text">123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-building"></i>
-                                    <span>Xưởng sản xuất: Lô 45 Khu Công Nghiệp Hòa Khánh, Đà Nẵng</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-industry"></i></span>
+                                    <span class="ftr__contact-text">Lô 45 KCN Hòa Khánh, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    <span>Hotline: <a href="tel:0123456789">0123 456 789</a> (Zalo)</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-phone"></i></span>
+                                    <span class="ftr__contact-text"><a href="tel:0123456789">0123 456 789</a>
+                                        <em>(Zalo)</em></span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span>Email: <a href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-envelope-o"></i></span>
+                                    <span class="ftr__contact-text"><a
+                                            href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
                                 </li>
                             </ul>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-bottom-bar mt-20 pt-30 border-top-dark">
+            <!-- Bottom bar -->
+            <div class="ftr__bottom">
+                <div class="ftr__bottom-divider"></div>
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 text-center text-md-left mb-15 mb-md-0">
-                            <p class="copyright-text mb-0">&copy; 2026 <span>DanaHome</span>. Thiết kế & Bản quyền thuộc
-                                về DanaHome.</p>
-                        </div>
-                        <div class="col-md-6 text-center text-md-right">
-                            <div class="footer-bottom-brand">
-                                <span class="brand-highlight">DANAHOME</span> - KIẾN TẠO KHÔNG GIAN SỐNG
-                            </div>
+                    <div class="ftr__bottom-inner">
+                        <p class="ftr__copyright">&copy; 2026 <strong>DanaHome</strong>. Bản quyền thuộc về DanaHome.
+                        </p>
+                        <div class="ftr__bottom-cert">
+                            <span class="ftr__cert-badge"><i class="fa fa-shield"></i> Uy tín &amp; Chất lượng</span>
+                            <span class="ftr__cert-badge"><i class="fa fa-star"></i> 5 năm kinh nghiệm</span>
                         </div>
                     </div>
                 </div>
@@ -442,7 +496,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
-
+    <script src="../js/main1.js"></script>
     <script>
         // Xử lý gửi form cơ bản (demo phía client - cần nối API/backend thực tế để hoạt động)
         document.addEventListener('DOMContentLoaded', function () {
@@ -467,4 +521,5 @@
         });
     </script>
 </body>
+
 </html>

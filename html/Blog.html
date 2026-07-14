@@ -88,8 +88,10 @@
                                     <ul class="sub-menu">
                                         <li><a href="Quotation&Contact.html#bao-gia-thiet-ke">Báo giá thiết kế</a></li>
                                         <li><a href="Quotation&Contact.html#bao-gia-thi-cong">Báo giá thi công</a></li>
-                                        <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia">Đăng ký nhận báo giá</a></li>
-                                        <li><a href="Quotation&Contact.html#thong-tin-lien-he">Thông tin liên hệ</a></li>
+                                        <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia">Đăng ký nhận báo
+                                                giá</a></li>
+                                        <li><a href="Quotation&Contact.html#thong-tin-lien-he">Thông tin liên hệ</a>
+                                        </li>
                                         <li><a href="Quotation&Contact.html#hotline-zalo">Hotline / Zalo</a></li>
                                         <li><a href="Quotation&Contact.html#email">Email</a></li>
                                         <li><a href="Quotation&Contact.html#ban-do">Bản đồ</a></li>
@@ -111,7 +113,7 @@
 
                         <!-- Header Actions -->
                         <div class="header-actions-group">
-                            <a href="#" class="action-icon action-search" title="Tìm kiếm">
+                            <a href="#" class="action-icon action-search" id="searchToggleBtn" title="Tìm kiếm">
                                 <i class="fa fa-search"></i>
                             </a>
                             <div class="action-auth">
@@ -131,14 +133,31 @@
                 </div>
             </div>
         </header>
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-overlay-inner">
+                <form class="search-overlay-form" id="searchForm" action="#" method="get">
+                    <input type="text" id="searchInput" name="q" placeholder="Tìm kiếm nội thất, dự án, bài viết..."
+                        autocomplete="off">
+                    <button type="submit" class="search-submit-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
 
         <!-- Page Banner -->
-        <div class="page-banner-section section" style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;"></div>
+        <div class="page-banner-section section"
+            style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80'); padding: 100px 0; position: relative; background-size: cover; background-position: center; display: block; clear: both;">
+            <div
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;">
+            </div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="page-banner text-center">
-                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Tin Tức & Cẩm Nang</h1>
-                    <ul class="page-breadcrumb" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
+                    <h1 style="color: #ffffff; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Tin
+                        Tức & Cẩm Nang</h1>
+                    <ul class="page-breadcrumb"
+                        style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
                         <li><a href="home.html" style="color: #cea679;">Trang chủ</a></li>
                         <li style="color: #ffffff;">/ Tin tức</li>
                     </ul>
@@ -146,7 +165,8 @@
             </div>
         </div>
 
-        <main class="site-main-content clearfix" style="display: block; clear: both; position: relative; width: 100%; padding: 60px 0;">
+        <main class="site-main-content clearfix"
+            style="display: block; clear: both; position: relative; width: 100%; padding: 60px 0;">
             <div class="container">
 
                 <!-- Bộ lọc chuyên mục -->
@@ -166,14 +186,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="xu-huong">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Xu hướng thiết kế nội thất 2026">
+                                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+                                    alt="Xu hướng thiết kế nội thất 2026">
                                 <span class="blog-date">09 Tháng 7, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Xu hướng</span>
-                                <h3><a href="Blog-Detail.html">Top 5 xu hướng thiết kế nội thất phòng khách lên ngôi trong năm 2026</a></h3>
-                                <p>Khám phá các phong cách thiết kế tối giản, sử dụng vật liệu xanh bền vững giúp không gian phòng khách của bạn vừa sang trọng vừa tràn đầy năng lượng...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Top 5 xu hướng thiết kế nội thất phòng khách lên ngôi
+                                        trong năm 2026</a></h3>
+                                <p>Khám phá các phong cách thiết kế tối giản, sử dụng vật liệu xanh bền vững giúp không
+                                    gian phòng khách của bạn vừa sang trọng vừa tràn đầy năng lượng...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -181,14 +205,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="kinh-nghiem">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Mẹo tối ưu diện tích bếp">
+                                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80"
+                                    alt="Mẹo tối ưu diện tích bếp">
                                 <span class="blog-date">02 Tháng 7, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Kinh nghiệm</span>
-                                <h3><a href="Blog-Detail.html">Bí quyết bố trí tủ bếp thông minh cho nhà phố và căn hộ chung cư nhỏ</a></h3>
-                                <p>Làm sao để sở hữu một căn bếp vừa gọn gàng vừa tiện nghi? DanaHome mách bạn cách tối ưu hóa các góc chết trong hệ tủ bếp bằng phụ kiện hiện đại...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Bí quyết bố trí tủ bếp thông minh cho nhà phố và căn hộ
+                                        chung cư nhỏ</a></h3>
+                                <p>Làm sao để sở hữu một căn bếp vừa gọn gàng vừa tiện nghi? DanaHome mách bạn cách tối
+                                    ưu hóa các góc chết trong hệ tủ bếp bằng phụ kiện hiện đại...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -196,14 +224,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="phong-thuy">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Phong thủy phòng ngủ">
+                                <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80"
+                                    alt="Phong thủy phòng ngủ">
                                 <span class="blog-date">25 Tháng 6, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Phong thủy</span>
-                                <h3><a href="Blog-Detail.html">Những điều kiêng kỵ trong phong thủy phòng ngủ gia chủ cần biết</a></h3>
-                                <p>Giấc ngủ ảnh hưởng trực tiếp đến sức khỏe và tài lộc. Hãy cùng các chuyên gia DanaHome điểm qua các lỗi đặt vị trí giường ngủ phổ biến và cách hóa giải...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Những điều kiêng kỵ trong phong thủy phòng ngủ gia chủ
+                                        cần biết</a></h3>
+                                <p>Giấc ngủ ảnh hưởng trực tiếp đến sức khỏe và tài lộc. Hãy cùng các chuyên gia
+                                    DanaHome điểm qua các lỗi đặt vị trí giường ngủ phổ biến và cách hóa giải...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -211,14 +243,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="mau-sac">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=600&q=80" alt="Phối màu nội thất">
+                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=600&q=80"
+                                    alt="Phối màu nội thất">
                                 <span class="blog-date">18 Tháng 6, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Màu sắc</span>
-                                <h3><a href="Blog-Detail.html">Nguyên tắc phối màu 60-30-10 trong thiết kế nội thất hiện đại</a></h3>
-                                <p>Một không gian hài hòa luôn bắt đầu từ cách phối màu chuẩn xác. Cùng tìm hiểu công thức 60-30-10 được các nhà thiết kế chuyên nghiệp áp dụng...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Nguyên tắc phối màu 60-30-10 trong thiết kế nội thất hiện
+                                        đại</a></h3>
+                                <p>Một không gian hài hòa luôn bắt đầu từ cách phối màu chuẩn xác. Cùng tìm hiểu công
+                                    thức 60-30-10 được các nhà thiết kế chuyên nghiệp áp dụng...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -226,14 +262,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="vat-lieu">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&w=600&q=80" alt="Vật liệu gỗ công nghiệp">
+                                <img src="https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&w=600&q=80"
+                                    alt="Vật liệu gỗ công nghiệp">
                                 <span class="blog-date">10 Tháng 6, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Vật liệu</span>
-                                <h3><a href="Blog-Detail.html">So sánh gỗ công nghiệp MDF, MFC, HDF: Nên chọn loại nào?</a></h3>
-                                <p>Mỗi loại cốt gỗ công nghiệp có ưu nhược điểm riêng về độ bền, khả năng chống ẩm và mức giá. DanaHome giúp bạn chọn đúng loại phù hợp với nhu cầu...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">So sánh gỗ công nghiệp MDF, MFC, HDF: Nên chọn loại
+                                        nào?</a></h3>
+                                <p>Mỗi loại cốt gỗ công nghiệp có ưu nhược điểm riêng về độ bền, khả năng chống ẩm và
+                                    mức giá. DanaHome giúp bạn chọn đúng loại phù hợp với nhu cầu...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -241,14 +281,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="anh-sang">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Ánh sáng phòng khách">
+                                <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+                                    alt="Ánh sáng phòng khách">
                                 <span class="blog-date">02 Tháng 6, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Ánh sáng</span>
-                                <h3><a href="Blog-Detail.html">3 lớp ánh sáng cơ bản giúp không gian sống trở nên đẳng cấp</a></h3>
-                                <p>Ánh sáng tổng thể, ánh sáng chức năng và ánh sáng điểm nhấn - kết hợp đúng cách sẽ nâng tầm mọi không gian nội thất của bạn...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">3 lớp ánh sáng cơ bản giúp không gian sống trở nên đẳng
+                                        cấp</a></h3>
+                                <p>Ánh sáng tổng thể, ánh sáng chức năng và ánh sáng điểm nhấn - kết hợp đúng cách sẽ
+                                    nâng tầm mọi không gian nội thất của bạn...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -256,14 +300,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="kinh-nghiem">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Kinh nghiệm giám sát thi công">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
+                                    alt="Kinh nghiệm giám sát thi công">
                                 <span class="blog-date">26 Tháng 5, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Kinh nghiệm</span>
-                                <h3><a href="Blog-Detail.html">5 điều cần kiểm tra trước khi nghiệm thu công trình nội thất</a></h3>
-                                <p>Đừng để những lỗi nhỏ trở thành phiền toái lớn. Danh sách kiểm tra chi tiết giúp gia chủ nghiệm thu công trình một cách chuyên nghiệp...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">5 điều cần kiểm tra trước khi nghiệm thu công trình nội
+                                        thất</a></h3>
+                                <p>Đừng để những lỗi nhỏ trở thành phiền toái lớn. Danh sách kiểm tra chi tiết giúp gia
+                                    chủ nghiệm thu công trình một cách chuyên nghiệp...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -271,14 +319,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="xu-huong">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80" alt="Phong cách Indochine">
+                                <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80"
+                                    alt="Phong cách Indochine">
                                 <span class="blog-date">15 Tháng 5, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Xu hướng</span>
-                                <h3><a href="Blog-Detail.html">Phong cách Indochine: Vẻ đẹp hoài cổ giữa lòng đô thị hiện đại</a></h3>
-                                <p>Sự giao thoa giữa nét Á Đông truyền thống và nét Pháp tinh tế tạo nên một phong cách thiết kế được ưa chuộng bậc nhất hiện nay...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Phong cách Indochine: Vẻ đẹp hoài cổ giữa lòng đô thị
+                                        hiện đại</a></h3>
+                                <p>Sự giao thoa giữa nét Á Đông truyền thống và nét Pháp tinh tế tạo nên một phong cách
+                                    thiết kế được ưa chuộng bậc nhất hiện nay...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -286,14 +338,18 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-30 blog-item" data-category="phong-thuy">
                         <div class="blog-card">
                             <div class="blog-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?auto=format&fit=crop&w=600&q=80" alt="Phong thủy bếp">
+                                <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?auto=format&fit=crop&w=600&q=80"
+                                    alt="Phong thủy bếp">
                                 <span class="blog-date">08 Tháng 5, 2026</span>
                             </div>
                             <div class="blog-body">
                                 <span class="blog-category">Phong thủy</span>
-                                <h3><a href="Blog-Detail.html">Bố trí bếp hợp phong thủy: Vị trí bếp nấu, bồn rửa và tủ lạnh</a></h3>
-                                <p>Không gian bếp hợp phong thủy không chỉ mang lại may mắn mà còn giúp việc nấu nướng thuận tiện, an toàn hơn cho cả gia đình...</p>
-                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                <h3><a href="Blog-Detail.html">Bố trí bếp hợp phong thủy: Vị trí bếp nấu, bồn rửa và tủ
+                                        lạnh</a></h3>
+                                <p>Không gian bếp hợp phong thủy không chỉ mang lại may mắn mà còn giúp việc nấu nướng
+                                    thuận tiện, an toàn hơn cho cả gia đình...</p>
+                                <a href="Blog-Detail.html" class="blog-readmore">Đọc thêm <i
+                                        class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -316,101 +372,121 @@
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer-section bg-dark text-white pt-80 pb-40">
-            <div class="container">
-                <div class="row row-25">
+                <footer class="ftr">
+            <!-- Dải accent trên cùng -->
+            <div class="ftr__accent-bar"></div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget about-widget">
-                            <h4 class="footer-title">DanaHome</h4>
-                            <span class="footer-title-line"></span>
-                            <p class="mt-20">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói uy tín
-                                hàng đầu. Chúng tôi mang đến giải pháp tối ưu không gian sống, biến ngôi nhà mơ ước của
-                                bạn thành hiện thực với chi phí tối ưu nhất từ xưởng sản xuất trực tiếp.</p>
-                            <div class="footer-social-links mt-25">
-                                <a href="#" class="fb-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="yt-icon" title="Youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="ins-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                <a href="#" class="zalo-icon" title="Zalo Official"><i class="fa fa-comments"></i></a>
+            <div class="ftr__main">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Cột 1: Thương hiệu -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 ftr__col ftr__col--brand">
+                            <div class="ftr__brand-logo">
+                                <span class="ftr__brand-icon"><i class="fa fa-home"></i></span>
+                                <span class="ftr__brand-name">Dana<span>Home</span></span>
+                            </div>
+                            <p class="ftr__brand-desc">DanaHome tự hào là đơn vị thiết kế và thi công nội thất trọn gói
+                                uy tín hàng đầu tại Đà Nẵng. Chúng tôi mang đến giải pháp tối ưu không gian sống từ
+                                xưởng sản xuất trực tiếp.</p>
+                            <div class="ftr__tagline">
+                                <span class="ftr__tagline-text">KIẾN TẠO — KHÔNG GIAN — SỐNG</span>
+                            </div>
+                            <div class="ftr__social">
+                                <a href="#" class="ftr__social-btn ftr__social-btn--fb" title="Facebook"
+                                    aria-label="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--yt" title="Youtube"
+                                    aria-label="Youtube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--ins" title="Instagram"
+                                    aria-label="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#" class="ftr__social-btn ftr__social-btn--zalo" title="Zalo"
+                                    aria-label="Zalo">
+                                    <i class="fa fa-comments"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Dịch Vụ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Services.html#thiet-ke-noi-that"><i class="fa fa-angle-right"></i> Thiết kế nội thất</a></li>
-                                <li><a href="Services.html#thi-cong-noi-that"><i class="fa fa-angle-right"></i> Thi công nội thất</a></li>
-                                <li><a href="Services.html#cai-tao"><i class="fa fa-angle-right"></i> Cải tạo nhà phố</a></li>
-                                <li><a href="Services.html#tron-goi"><i class="fa fa-angle-right"></i> Thiết kế trọn gói</a></li>
-                                <li><a href="Services.html"><i class="fa fa-angle-right"></i> Thiết kế chung cư</a></li>
+                        <!-- Cột 2: Dịch Vụ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Dịch Vụ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thi công nội thất</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Cải tạo nhà phố</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế biệt thự</a></li>
+                                <li><a href="Services.html"><i class="fa fa-angle-right"></i>Thiết kế chung cư</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 col-sm-6 col-6 mb-40">
-                        <div class="footer-widget links-widget">
-                            <h4 class="footer-title">Hỗ Trợ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-menu-links mt-20">
-                                <li><a href="Library.html"><i class="fa fa-angle-right"></i> Thư viện ảnh 3D</a></li>
-                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i> Tin tức kiến thức</a></li>
-                                <li><a href="Quotation&Contact.html#dang-ky-nhan-bao-gia"><i class="fa fa-angle-right"></i> Quy trình báo
+                        <!-- Cột 3: Hỗ Trợ -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Hỗ Trợ
+                            </h4>
+                            <ul class="ftr__links">
+                                <li><a href="Library.html"><i class="fa fa-angle-right"></i>Thư viện ảnh 3D</a></li>
+                                <li><a href="Blog.html"><i class="fa fa-angle-right"></i>Tin tức kiến thức</a></li>
+                                <li><a href="Quotation&Contact.html"><i class="fa fa-angle-right"></i>Quy trình báo
                                         giá</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Chính sách bảo hành</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Hồ sơ năng lực</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Chính sách bảo hành</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Hồ sơ năng lực</a></li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-40">
-                        <div class="footer-widget contact-widget">
-                            <h4 class="footer-title">Liên Hệ</h4>
-                            <span class="footer-title-line"></span>
-                            <ul class="footer-contact-info mt-20">
-                                <li>
-                                    <i class="fa fa-map-marker"></i>
-                                    <span>Văn phòng: 123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
+                        <!-- Cột 4: Liên Hệ -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 ftr__col">
+                            <h4 class="ftr__heading">
+                                <span class="ftr__heading-dot"></span>Liên Hệ
+                            </h4>
+                            <ul class="ftr__contact">
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-map-marker"></i></span>
+                                    <span class="ftr__contact-text">123 Đường Nguyễn Văn Linh, Hải Châu, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-building"></i>
-                                    <span>Xưởng sản xuất: Lô 45 Khu Công Nghiệp Hòa Khánh, Đà Nẵng</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-industry"></i></span>
+                                    <span class="ftr__contact-text">Lô 45 KCN Hòa Khánh, Đà Nẵng</span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    <span>Hotline: <a href="tel:0123456789">0123 456 789</a> (Zalo)</span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-phone"></i></span>
+                                    <span class="ftr__contact-text"><a href="tel:0123456789">0123 456 789</a>
+                                        <em>(Zalo)</em></span>
                                 </li>
-                                <li>
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span>Email: <a href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
+                                <li class="ftr__contact-item">
+                                    <span class="ftr__contact-icon"><i class="fa fa-envelope-o"></i></span>
+                                    <span class="ftr__contact-text"><a
+                                            href="mailto:contact@danahome.vn">contact@danahome.vn</a></span>
                                 </li>
                             </ul>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-bottom-bar mt-20 pt-30 border-top-dark">
+            <!-- Bottom bar -->
+            <div class="ftr__bottom">
+                <div class="ftr__bottom-divider"></div>
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 text-center text-md-left mb-15 mb-md-0">
-                            <p class="copyright-text mb-0">&copy; 2026 <span>DanaHome</span>. Thiết kế & Bản quyền thuộc
-                                về DanaHome.</p>
-                        </div>
-                        <div class="col-md-6 text-center text-md-right">
-                            <div class="footer-bottom-brand">
-                                <span class="brand-highlight">DANAHOME</span> - KIẾN TẠO KHÔNG GIAN SỐNG
-                            </div>
+                    <div class="ftr__bottom-inner">
+                        <p class="ftr__copyright">&copy; 2026 <strong>DanaHome</strong>. Bản quyền thuộc về DanaHome.
+                        </p>
+                        <div class="ftr__bottom-cert">
+                            <span class="ftr__cert-badge"><i class="fa fa-shield"></i> Uy tín &amp; Chất lượng</span>
+                            <span class="ftr__cert-badge"><i class="fa fa-star"></i> 5 năm kinh nghiệm</span>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-
     </div>
 
     <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
@@ -422,6 +498,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/main1.js"></script>
 
     <script>
         // Lọc bài viết theo chuyên mục (không cần load lại trang)
@@ -458,4 +535,5 @@
         });
     </script>
 </body>
+
 </html>

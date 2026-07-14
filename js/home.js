@@ -3,12 +3,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".mobile-menu-toggle");
   const headerNav = document.querySelector(".header-nav");
   const navItems = document.querySelectorAll(".nav-menu > li > a");
+  const siteHeader = document.querySelector(".header.header-clean, header.header");
+  const headerInner = document.querySelector(".header-inner");
 
-  if (menuToggle) {
+  function syncHeroViewportHeight() {
+    const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
+    document.documentElement.style.setProperty(
+      "--home-header-height",
+      `${headerHeight}px`,
+    );
+  }
+
+  syncHeroViewportHeight();
+  window.addEventListener("resize", syncHeroViewportHeight);
+
+  function isMobileView() {
+    return window.innerWidth <= 768;
+  }
+
+  function closeMobileMenu() {
+    if (!menuToggle || !headerNav) {
+      return;
+    }
+
+    menuToggle.classList.remove("active");
+    headerNav.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    headerNav.querySelectorAll(".sub-menu.active").forEach((subMenu) => {
+      subMenu.classList.remove("active");
+    });
+  }
+
+  if (menuToggle && headerNav && menuToggle.dataset.mobileMenuBound !== "true") {
+    menuToggle.dataset.mobileMenuBound = "true";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Mở menu điều hướng");
+
     menuToggle.addEventListener("click", function (e) {
       e.preventDefault();
-      this.classList.toggle("active");
-      headerNav.classList.toggle("active");
+      const isOpen = headerNav.classList.toggle("active");
+      this.classList.toggle("active", isOpen);
+      this.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   }
 
@@ -17,10 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function (e) {
       const subMenu = this.nextElementSibling;
       if (subMenu && subMenu.classList.contains("sub-menu")) {
-        if (window.innerWidth <= 768) {
+        if (isMobileView()) {
           e.preventDefault();
-          subMenu.classList.toggle("active");
+          const isOpening = !subMenu.classList.contains("active");
+          headerNav.querySelectorAll(".sub-menu.active").forEach((openSubMenu) => {
+            if (openSubMenu !== subMenu) {
+              openSubMenu.classList.remove("active");
+            }
+          });
+          subMenu.classList.toggle("active", isOpening);
         }
+        return;
+      }
+
+      if (isMobileView()) {
+        closeMobileMenu();
       }
     });
   });
@@ -28,11 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close menu when clicking outside
   document.addEventListener("click", function (e) {
     if (
-      !e.target.closest(".header-inner") &&
+      headerInner &&
+      menuToggle &&
+      headerNav &&
+      !headerInner.contains(e.target) &&
       headerNav.classList.contains("active")
     ) {
-      menuToggle.classList.remove("active");
-      headerNav.classList.remove("active");
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (!isMobileView()) {
+      closeMobileMenu();
     }
   });
 
@@ -87,141 +141,184 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listeners for carousel
-  if (carouselPrevBtn) {
-    carouselPrevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetAutoPlay();
+  if (carouselTrack && carouselSlides.length) {
+    if (carouselPrevBtn) {
+      carouselPrevBtn.addEventListener("click", () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    if (carouselNextBtn) {
+      carouselNextBtn.addEventListener("click", () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+
+    carouselDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-slide"));
+        goToSlide(index);
+      });
     });
+
+    // Start auto play on page load
+    startAutoPlay();
   }
-
-  if (carouselNextBtn) {
-    carouselNextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetAutoPlay();
-    });
-  }
-
-  carouselDots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      const index = parseInt(dot.getAttribute("data-slide"));
-      goToSlide(index);
-    });
-  });
-
-  // Start auto play on page load
-  startAutoPlay();
 });
-// Chọn các phần tử cần thiết
-const bannerImg = document.querySelector(".banner-center-img");
-const dots = document.querySelectorAll(".banner-dot");
-
-function changeSlide(newImgSrc, activeDotIndex) {
-  // 1. Thêm class hiệu ứng để ảnh cũ mờ và thu nhỏ đi
-  bannerImg.classList.add("fade-effect");
-
-  // 2. Chờ hiệu ứng mờ hoàn tất (0.3 giây) rồi mới đổi nguồn ảnh
-  setTimeout(() => {
-    bannerImg.src = newImgSrc;
-
-    // Đổi trạng thái active của chấm tròn (dots)
-    dots.forEach((dot) => dot.classList.remove("active"));
-    dots[activeDotIndex].classList.add("active");
-
-    // 3. Xóa class hiệu ứng để ảnh mới phóng to và hiện rõ lên mượt mà
-    bannerImg.classList.remove("fade-effect");
-  }, 300);
-}
-
-// Ví dụ bắt sự kiện khi bấm vào các chấm tròn (dots)
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    // Thay bằng đường dẫn ảnh thật của bạn tại đây
-    const paths = [
-      "/images/banner-main-1.avif",
-      "/images/banner-main-2.avif",
-      "/images/banner-main-3.avif",
-    ];
-    changeSlide(paths[index], index);
-  });
-});
-// Banner showcase: xoay vòng đúng 3 ảnh hiện có trong thư mục /images/
+// Hero banner 1 ảnh full màn hình với dots + auto slide
 (function () {
-  var images = [
-    "/images/banner-side-1.avif",
-    "/images/banner-main-1.avif",
-    "/images/banner-side-2.jpg",
+  const heroBanner = document.querySelector("#homeHeroBanner");
+  const bannerSlide = heroBanner?.querySelector(".banner-center-slide");
+  const bannerImg = heroBanner?.querySelector(".banner-center-img");
+  const dots = heroBanner?.querySelectorAll(".banner-dot");
+  const prevArrow = heroBanner?.querySelector(".banner-arrow-prev");
+  const nextArrow = heroBanner?.querySelector(".banner-arrow-next");
+
+  if (!heroBanner || !bannerSlide || !bannerImg || !dots || !dots.length) {
+    return;
+  }
+
+  const slides = [
+    {
+      src: "/images/banner-main-1.avif",
+      alt: "Thiết kế nội thất DanaHome",
+    },
+    {
+      src: "/images/banner-side-1.avif",
+      alt: "Không gian nội thất cao cấp",
+    },
+    {
+      src: "/images/banner-main-4.avif",
+      alt: "Công trình kiến trúc DanaHome",
+    },
   ];
-  var current = 1; // ảnh chính ban đầu
 
-  var leftBtn = document.querySelector(".banner-side-left img");
-  var mainImg = document.querySelector(".banner-center-img");
-  var rightBtn = document.querySelector(".banner-side-right img");
-  var dots = document.querySelectorAll(".banner-dot");
-  var prevArrow = document.querySelector(".banner-arrow-prev");
-  var nextArrow = document.querySelector(".banner-arrow-next");
+  let current = 0;
+  let autoSlideTimer = null;
+  let transitionToken = 0;
+  let transitionResetTimer = null;
+  const transitionImg = document.createElement("img");
 
-  function render() {
-    const leftIndex = (current - 1 + images.length) % images.length;
-    const rightIndex = (current + 1) % images.length;
+  transitionImg.className = "banner-transition-img";
+  transitionImg.alt = "";
+  transitionImg.setAttribute("aria-hidden", "true");
+  bannerImg.insertAdjacentElement("afterend", transitionImg);
 
-    leftBtn.style.opacity = 0;
-    mainImg.style.opacity = 0;
-    rightBtn.style.opacity = 0;
-
-    setTimeout(() => {
-      leftBtn.src = images[leftIndex];
-      mainImg.src = images[current];
-      rightBtn.src = images[rightIndex];
-
-      leftBtn.style.opacity = 1;
-      mainImg.style.opacity = 1;
-      rightBtn.style.opacity = 1;
-    }, 200);
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === current);
+  function updateDots() {
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("active", dotIndex === current);
     });
   }
 
-  function goTo(index) {
-    const showcase = document.querySelector(".banner-showcase");
-
-    showcase.classList.add("banner-changing");
-
-    setTimeout(() => {
-      current = (index + images.length) % images.length;
-
-      render();
-
-      showcase.classList.remove("banner-changing");
-    }, 350);
+  function preloadSlide(index) {
+    const preloadImg = new Image();
+    preloadImg.src = slides[(index + slides.length) % slides.length].src;
   }
 
-  if (prevArrow)
-    prevArrow.addEventListener("click", function () {
-      goTo(current - 1);
-    });
-  if (nextArrow)
-    nextArrow.addEventListener("click", function () {
-      goTo(current + 1);
-    });
-  var leftWrap = document.querySelector(".banner-side-left");
-  var rightWrap = document.querySelector(".banner-side-right");
-  if (leftWrap)
-    leftWrap.addEventListener("click", function () {
-      goTo(current - 1);
-    });
-  if (rightWrap)
-    rightWrap.addEventListener("click", function () {
-      goTo(current + 1);
-    });
-  dots.forEach(function (dot, i) {
+  function render(index, immediate = false) {
+    const nextIndex = (index + slides.length) % slides.length;
+    const nextSlideData = slides[nextIndex];
+
+    if (!immediate && nextIndex === current) {
+      return;
+    }
+
+    current = nextIndex;
+    updateDots();
+
+    if (immediate) {
+      bannerImg.src = nextSlideData.src;
+      bannerImg.alt = nextSlideData.alt;
+      preloadSlide(current + 1);
+      return;
+    }
+
+    const activeToken = ++transitionToken;
+    const preloadImg = new Image();
+    clearTimeout(transitionResetTimer);
+    bannerSlide.classList.remove("is-transitioning");
+
+    function swapImage() {
+      if (activeToken !== transitionToken) {
+        return;
+      }
+
+      transitionImg.src = nextSlideData.src;
+      transitionImg.alt = nextSlideData.alt;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (activeToken !== transitionToken) {
+            return;
+          }
+
+          bannerSlide.classList.add("is-transitioning");
+          transitionResetTimer = setTimeout(() => {
+            if (activeToken !== transitionToken) {
+              return;
+            }
+
+            bannerImg.src = nextSlideData.src;
+            bannerImg.alt = nextSlideData.alt;
+            transitionImg.removeAttribute("src");
+            bannerSlide.classList.remove("is-transitioning");
+            preloadSlide(current + 1);
+          }, 580);
+        });
+      });
+    }
+
+    preloadImg.onload = swapImage;
+    preloadImg.onerror = swapImage;
+    preloadImg.src = nextSlideData.src;
+
+    if (preloadImg.complete) {
+      swapImage();
+    }
+  }
+
+  function nextSlide() {
+    render(current + 1);
+  }
+
+  function prevSlide() {
+    render(current - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideTimer = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideTimer) {
+      clearInterval(autoSlideTimer);
+    }
+  }
+
+  prevArrow?.addEventListener("click", function () {
+    prevSlide();
+    startAutoSlide();
+  });
+
+  nextArrow?.addEventListener("click", function () {
+    nextSlide();
+    startAutoSlide();
+  });
+
+  dots.forEach((dot, index) => {
     dot.addEventListener("click", function () {
-      goTo(i);
+      render(index);
+      startAutoSlide();
     });
   });
 
-  render();
+  heroBanner.addEventListener("mouseenter", stopAutoSlide);
+  heroBanner.addEventListener("mouseleave", startAutoSlide);
+
+  render(0, true);
+  startAutoSlide();
 })();
 document.addEventListener("DOMContentLoaded", function () {
   // 1. HIỆU ỨNG BẤM CHUYỂN TAB MẪU THIẾT KẾ MƯỢT MÀ (ANIMATION FILTER)
@@ -276,6 +373,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Hiện nội dung ngay khi tải trang để tránh trường hợp section bị ẩn trắng nếu animation không kịp chạy.
+  revealElements.forEach((el) => {
+    el.classList.add("reveal-active");
+  });
+
   // Chạy ngay khi tải trang và khi cuộn chuột
   window.addEventListener("scroll", checkScrollReveal);
   checkScrollReveal();
@@ -283,19 +385,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // Xử lý nút Back to Top
 const backToTopBtn = document.getElementById("backToTop");
 
-window.addEventListener("scroll", function () {
-  // Nếu cuộn xuống quá 400px thì hiển thị nút, ngược lại thì ẩn đi
-  if (window.pageYOffset > 400) {
-    backToTopBtn.classList.add("show");
-  } else {
-    backToTopBtn.classList.remove("show");
-  }
-});
-
-// Hiệu ứng cuộn mượt lên đầu trang khi bấm
-backToTopBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Cuộn mượt mà thay vì giật thẳng lên luôn
+if (backToTopBtn) {
+  window.addEventListener("scroll", function () {
+    // Nếu cuộn xuống quá 400px thì hiển thị nút, ngược lại thì ẩn đi
+    if (window.pageYOffset > 400) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
   });
-});
+
+  // Hiệu ứng cuộn mượt lên đầu trang khi bấm
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Cuộn mượt mà thay vì giật thẳng lên luôn
+    });
+  });
+}
